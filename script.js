@@ -77,11 +77,60 @@ function weatherEmoji(group) {
   return { clear: "☀", cloudy: "☁", rain: "☂", snow: "❄" }[group];
 }
 
+async function fetchRegionName(latitude, longitude) {
+  const url =
+    "https://api.bigdatacloud.net/data/reverse-geocode-client" +
+    `?latitude=${latitude}&longitude=${longitude}&localityLanguage=ko`;
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error("지역명을 가져오지 못했습니다.");
+
+  const data = await response.json();
+  const administrative = data.localityInfo?.administrative || [];
+  const names = administrative.map((item) => item.name).filter(Boolean);
+
+  const region = data.principalSubdivision || "";
+  const city = names.find((name) =>
+    name.endsWith("시") && name !== region
+  ) || "";
+  const district = names.find((name) =>
+    name.endsWith("구") || name.endsWith("군")
+  ) || "";
+
+  const placeParts = [region];
+
+  if (city && !region.includes(city)) {
+    placeParts.push(city);
+  }
+
+  if (district && district !== city) {
+    placeParts.push(district);
+  }
+
+  if (placeParts.filter(Boolean).length === 1) {
+    const fallbackDistrict = data.locality || data.city || "";
+    if (fallbackDistrict && !region.includes(fallbackDistrict)) {
+      placeParts.push(fallbackDistrict);
+    }
+  }
+
+  return placeParts.filter(Boolean).join(" ") || "현재 위치";
+}
+
 async function fetchWeather(latitude, longitude, placeName) {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m&timezone=auto`;
   const response = await fetch(url);
   if (!response.ok) throw new Error("날씨 정보를 가져오지 못했습니다.");
   const data = await response.json();
+
+  if (!placeName) {
+    try {
+      placeName = await fetchRegionName(latitude, longitude);
+    } catch (error) {
+      placeName = "현재 위치";
+    }
+  }
+
   currentWeather = weatherGroup(data.current.weather_code);
   weatherStatus.textContent = `${weatherNames[currentWeather]} ${placeName}`;
   weatherDetail.textContent = `${Math.round(data.current.temperature_2m)}°C · 바람 ${Math.round(data.current.wind_speed_10m)}km/h`;
@@ -98,14 +147,14 @@ function loadWeather() {
   }
 
   navigator.geolocation.getCurrentPosition(
-    ({ coords }) => fetchWeather(coords.latitude, coords.longitude, "현재 위치").catch(useSeoulWeather),
+    ({ coords }) => fetchWeather(coords.latitude, coords.longitude).catch(useSeoulWeather),
     useSeoulWeather,
     { timeout: 7000 }
   );
 }
 
 function useSeoulWeather() {
-  fetchWeather(37.5665, 126.978, "서울")
+  fetchWeather(37.5665, 126.978, "서울특별시")
     .catch(() => {
       currentWeather = "cloudy";
       weatherStatus.textContent = "날씨 연결 실패";

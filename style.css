@@ -25,8 +25,8 @@ body::before {
   position: fixed;
   z-index: -2;
   inset: 0;
-  background: url("images/concert-background.jpg") center / cover no-repeat;
-  filter: grayscale(45%) contrast(115%) brightness(32%) saturate(80%);
+  background: url("images/westphotoandvideo-band-4671748.jpg") center / cover no-repeat;
+  filter: grayscale(50%) contrast(80%) brightness(40%) saturate(50%);
   transform: scale(1.02);
 }
 
@@ -84,7 +84,7 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
   z-index: -1;
   top: -60px;
   right: 0;
-  color: rgba(227, 59, 46, .14);
+  color: rgba(227, 59, 46, .55);
   font-family: "Black Han Sans", sans-serif;
   font-size: clamp(22rem, 48vw, 42rem);
   line-height: 1;
