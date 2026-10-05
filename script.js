@@ -1,38 +1,5 @@
-const songs = [
-  { title: "Don't Look Back in Anger", artist: "Oasis", year: 1995, genre: "Britpop", moods: ["blue", "frustrated"], weathers: ["cloudy", "rain"], energy: 3, reason: "천천히 고조되는 합창이 복잡한 마음을 바깥으로 밀어냅니다." },
-  { title: "Dreams", artist: "The Cranberries", year: 1992, genre: "Alternative Rock", moods: ["calm", "excited"], weathers: ["clear", "cloudy"], energy: 3, reason: "가볍게 떠오르는 기타와 목소리가 하루의 공기를 환기합니다." },
-  { title: "Heroes", artist: "David Bowie", year: 1977, genre: "Art Rock", moods: ["tired", "frustrated"], weathers: ["cloudy", "rain", "snow"], energy: 4, reason: "지친 날에도 단 한 번은 앞으로 나아가게 만드는 거대한 곡입니다." },
-  { title: "Here Comes the Sun", artist: "The Beatles", year: 1969, genre: "Folk Rock", moods: ["blue", "calm"], weathers: ["clear", "snow"], energy: 2, reason: "맑은 빛처럼 들어오는 기타가 굳은 마음을 느슨하게 풉니다." },
-  { title: "Everlong", artist: "Foo Fighters", year: 1997, genre: "Alternative Rock", moods: ["excited", "frustrated"], weathers: ["clear", "rain"], energy: 5, reason: "폭발적인 기타와 달리는 리듬이 쌓인 에너지를 꺼내줍니다." },
-  { title: "Linger", artist: "The Cranberries", year: 1993, genre: "Dream Pop", moods: ["blue", "calm"], weathers: ["rain", "cloudy"], energy: 2, reason: "비 오는 날의 잔상처럼 오래 남는 감정을 조용히 받아줍니다." },
-  { title: "Mr. Brightside", artist: "The Killers", year: 2003, genre: "Indie Rock", moods: ["excited", "frustrated"], weathers: ["clear", "cloudy"], energy: 5, reason: "멈추지 않는 비트가 답답한 기분을 단숨에 움직이게 합니다." },
-  { title: "Wish You Were Here", artist: "Pink Floyd", year: 1975, genre: "Progressive Rock", moods: ["blue", "calm"], weathers: ["cloudy", "rain"], energy: 1, reason: "여백이 많은 기타 선율이 생각을 서두르지 않게 해줍니다." },
-  { title: "Song 2", artist: "Blur", year: 1997, genre: "Alternative Rock", moods: ["tired", "excited"], weathers: ["clear", "cloudy"], energy: 5, reason: "짧고 강한 폭발력으로 처진 에너지를 빠르게 끌어올립니다." },
-  { title: "The Chain", artist: "Fleetwood Mac", year: 1977, genre: "Classic Rock", moods: ["focused", "frustrated"], weathers: ["cloudy", "rain"], energy: 4, reason: "팽팽한 리듬과 후반부의 추진력이 집중을 오래 붙듭니다." },
-  { title: "Where Is My Mind?", artist: "Pixies", year: 1988, genre: "Alternative Rock", moods: ["tired", "focused"], weathers: ["cloudy", "rain"], energy: 2, reason: "낯설고 반복적인 리듬이 복잡한 생각에 새로운 간격을 만듭니다." },
-  { title: "Friday I'm in Love", artist: "The Cure", year: 1992, genre: "Alternative Rock", moods: ["excited", "calm"], weathers: ["clear", "cloudy"], energy: 4, reason: "밝게 튀는 기타가 평범한 하루를 가볍고 선명하게 바꿉니다." },
-  { title: "No Surprises", artist: "Radiohead", year: 1997, genre: "Alternative Rock", moods: ["tired", "blue"], weathers: ["rain", "cloudy"], energy: 1, reason: "차분한 반복 속에서 과열된 마음을 잠시 내려놓게 합니다." },
-  { title: "Sweet Disposition", artist: "The Temper Trap", year: 2008, genre: "Indie Rock", moods: ["focused", "calm"], weathers: ["clear", "cloudy"], energy: 3, reason: "투명하게 겹치는 사운드가 집중과 낙관을 함께 끌어냅니다." },
-  { title: "Immigrant Song", artist: "Led Zeppelin", year: 1970, genre: "Hard Rock", moods: ["tired", "excited"], weathers: ["snow", "clear"], energy: 5, reason: "거칠고 압축된 에너지로 몸과 마음의 시동을 겁니다." }
-];
-
-const songInsights = {
-  "Don't Look Back in Anger": { theme: "후회와 분노를 지나 과거를 놓아주는 태도", mood: "쓸쓸하게 시작해 거대한 합창으로 벅차오르는 분위기" },
-  "Dreams": { theme: "사랑에 빠지며 달라지는 마음과 새로운 가능성", mood: "투명하고 들뜬 공기감이 번지는 몽환적인 분위기" },
-  "Heroes": { theme: "완전하지 않아도 단 하루만큼은 용기 내는 두 사람", mood: "절제된 시작에서 장엄하게 상승하는 분위기" },
-  "Here Comes the Sun": { theme: "긴 어려움이 지나고 다시 찾아오는 희망", mood: "따뜻한 햇살처럼 부드럽고 낙관적인 분위기" },
-  "Everlong": { theme: "시간이 멈추길 바랄 만큼 강렬한 관계의 순간", mood: "숨 가쁘게 달리면서도 아련함이 남는 분위기" },
-  "Linger": { theme: "끝난 관계에서 미처 놓지 못한 미련과 상처", mood: "섬세하고 서정적이며 비 오는 날처럼 촉촉한 분위기" },
-  "Mr. Brightside": { theme: "질투와 불안이 머릿속에서 걷잡을 수 없이 커지는 순간", mood: "초조하지만 춤추게 만드는 폭발적인 분위기" },
-  "Wish You Were Here": { theme: "부재한 사람을 향한 그리움과 진짜 삶에 대한 질문", mood: "담담하고 고독하며 넓은 여백이 느껴지는 분위기" },
-  "Song 2": { theme: "의미보다 순간의 충동과 에너지를 터뜨리는 쾌감", mood: "짧고 거칠며 장난스럽게 폭발하는 분위기" },
-  "The Chain": { theme: "무너진 관계 속에서도 끊어지지 않는 연결", mood: "긴장감이 서서히 쌓여 질주로 바뀌는 분위기" },
-  "Where Is My Mind?": { theme: "현실감이 흐려지는 혼란과 자기 인식의 순간", mood: "기묘하고 공중에 떠 있는 듯한 초현실적 분위기" },
-  "Friday I'm in Love": { theme: "복잡한 일주일 끝에 찾아오는 단순하고 환한 사랑", mood: "경쾌하고 다채로우며 거리로 나가고 싶은 분위기" },
-  "No Surprises": { theme: "과도한 압박에서 벗어나 조용한 삶을 바라는 마음", mood: "자장가처럼 평온하지만 그 아래 슬픔이 흐르는 분위기" },
-  "Sweet Disposition": { theme: "사라지기 전 붙잡고 싶은 젊음과 찰나의 감정", mood: "빛이 번지듯 점차 고양되는 맑고 드넓은 분위기" },
-  "Immigrant Song": { theme: "새로운 땅으로 향하는 전사의 기세와 정복의 서사", mood: "원초적이고 공격적이며 단숨에 치고 나가는 분위기" }
-};
+let songs = [];
+let songsLoaded = false;
 
 const moodNames = {
   tired: "지친", calm: "평온한", blue: "울적한",
@@ -53,13 +20,35 @@ const recommendButton = document.querySelector("#recommend-button");
 const selectionMessage = document.querySelector("#selection-message");
 const resultSection = document.querySelector("#result-section");
 
+async function loadSongs() {
+  try {
+    const response = await fetch("data.json");
+    if (!response.ok) throw new Error("곡 데이터를 불러오지 못했습니다.");
+
+    songs = await response.json();
+    songsLoaded = true;
+
+    if (selectedMood) {
+      recommendButton.disabled = false;
+      selectionMessage.textContent = "오늘의 음악을 찾을 준비가 됐어요.";
+    }
+  } catch (error) {
+    songsLoaded = false;
+    recommendButton.disabled = true;
+    selectionMessage.textContent = "곡 데이터를 불러오지 못했어요. Live Server로 실행해주세요.";
+    console.error(error);
+  }
+}
+
 document.querySelectorAll(".mood-button").forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelectorAll(".mood-button").forEach((item) => item.classList.remove("selected"));
     button.classList.add("selected");
     selectedMood = button.dataset.mood;
-    recommendButton.disabled = false;
-    selectionMessage.textContent = `${button.textContent}을 선택했어요.`;
+    recommendButton.disabled = !songsLoaded;
+    selectionMessage.textContent = songsLoaded
+      ? `${button.textContent}을 선택했어요.`
+      : "곡 데이터를 불러오는 중이에요.";
   });
 });
 
@@ -132,9 +121,21 @@ async function fetchWeather(latitude, longitude, placeName) {
   }
 
   currentWeather = weatherGroup(data.current.weather_code);
-  weatherStatus.textContent = `${weatherNames[currentWeather]} ${placeName}`;
+  renderWeatherStatus(weatherNames[currentWeather], placeName);
   weatherDetail.textContent = `${Math.round(data.current.temperature_2m)}°C · 바람 ${Math.round(data.current.wind_speed_10m)}km/h`;
   weatherIcon.textContent = weatherEmoji(currentWeather);
+}
+
+function renderWeatherStatus(weatherName, placeName) {
+  const [region = "", ...districtParts] = placeName.trim().split(/\s+/);
+  const district = districtParts.join(" ");
+
+  weatherStatus.replaceChildren();
+  weatherStatus.append(`${weatherName} ${region}`.trim());
+
+  if (district) {
+    weatherStatus.append(document.createElement("br"), district);
+  }
 }
 
 function loadWeather() {
@@ -174,14 +175,15 @@ function scoreSong(song) {
 }
 
 function showRecommendations() {
+  if (!songsLoaded || songs.length === 0) return;
+
   const picked = [...songs].sort((a, b) => scoreSong(b) - scoreSong(a)).slice(0, 3);
   const list = document.querySelector("#song-list");
   list.innerHTML = "";
 
   picked.forEach((song, index) => {
     const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(song.artist + " " + song.title)}`;
-    const lyricsUrl = `https://genius.com/search?q=${encodeURIComponent(song.artist + " " + song.title)}`;
-    const insight = songInsights[song.title];
+    const lyricsUrl = song.lyricsUrl;
     list.insertAdjacentHTML("beforeend", `
       <article class="song-card">
         <span class="song-number">0${index + 1}</span>
@@ -189,13 +191,13 @@ function showRecommendations() {
         <h3>${song.title}</h3>
         <p class="song-artist">${song.artist}</p>
         <dl class="song-analysis">
-          <div><dt>곡의 주제</dt><dd>${insight.theme}</dd></div>
-          <div><dt>정서·분위기</dt><dd>${insight.mood}</dd></div>
+          <div><dt>곡의 주제</dt><dd>${song.theme}</dd></div>
+          <div><dt>정서·분위기</dt><dd>${song.tone}</dd></div>
           <div><dt>추천 이유</dt><dd>${song.reason}</dd></div>
         </dl>
         <div class="song-links">
           <a class="listen-link" href="${searchUrl}" target="_blank" rel="noopener">YouTube ↗</a>
-          <a class="lyrics-link" href="${lyricsUrl}" target="_blank" rel="noopener">가사 찾기 ↗</a>
+          <a class="lyrics-link" href="${lyricsUrl}" target="_blank" rel="noopener">가사 보기 ↗</a>
         </div>
       </article>
     `);
@@ -217,3 +219,4 @@ function showRecommendations() {
 }
 
 loadWeather();
+loadSongs();

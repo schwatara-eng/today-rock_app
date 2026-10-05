@@ -25,7 +25,7 @@ body::before {
   position: fixed;
   z-index: -2;
   inset: 0;
-  background: url("images/westphotoandvideo-band-4671748.jpg") center / cover no-repeat;
+  background: url("images/pexels-pexels-user-891499677-19762492.jpg") center / cover no-repeat;
   filter: grayscale(50%) contrast(80%) brightness(40%) saturate(50%);
   transform: scale(1.02);
 }
