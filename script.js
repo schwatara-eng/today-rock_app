@@ -32,7 +32,7 @@ async function loadSongs() {
   } catch (error) {
     songsLoaded = false;
     recommendButton.disabled = true;
-    selectionMessage.textContent = "곡 데이터를 불러오지 못했어요. Live Server로 실행해주세요.";
+    selectionMessage.textContent = "곡 데이터를 불러오지 못했어요. 잠시 후 새로고침해주세요.";
     console.error(error);
   }
 }
@@ -218,7 +218,7 @@ function showRecommendations() {
   document.querySelector("#result-summary").textContent =
     selectedMood
       ? `${weatherNames[currentWeather]} 날씨와 ${moodNames[selectedMood]} 마음을 함께 고려했어요.`
-      : "오늘은 기분 선택 없이 100곡 가운데 세 곡을 무작위로 골랐어요.";
+      : `오늘은 기분 선택 없이 ${songs.length}곡 가운데 세 곡을 무작위로 골랐어요.`;
   document.querySelector("#pick-card").innerHTML = `
     <a class="pick-card-link" href="${topSearchUrl}" target="_blank" rel="noopener" aria-label="오늘의 원픽을 YouTube에서 듣기"></a>
     <div><p class="section-label">TODAY'S ONE PICK</p></div>
