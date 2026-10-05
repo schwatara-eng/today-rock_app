@@ -84,7 +84,7 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
   z-index: -1;
   top: -60px;
   right: 0;
-  color: rgba(227, 59, 46, .14);
+  color: rgba(73, 9, 3, 0.753);
   font-family: "Black Han Sans", sans-serif;
   font-size: clamp(22rem, 48vw, 42rem);
   line-height: 1;
