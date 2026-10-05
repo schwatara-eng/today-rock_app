@@ -25,8 +25,8 @@ body::before {
   position: fixed;
   z-index: -2;
   inset: 0;
-  background: url("images/pexels-pexels-user-891499677-19762492.jpg") center / cover no-repeat;
-  filter: grayscale(50%) contrast(80%) brightness(40%) saturate(50%);
+  background: url("images/concert-background.jpg") center / cover no-repeat;
+  filter: grayscale(45%) contrast(115%) brightness(32%) saturate(80%);
   transform: scale(1.02);
 }
 
@@ -84,7 +84,7 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
   z-index: -1;
   top: -60px;
   right: 0;
-  color: rgba(227, 59, 46, .55);
+  color: rgba(227, 59, 46, .14);
   font-family: "Black Han Sans", sans-serif;
   font-size: clamp(22rem, 48vw, 42rem);
   line-height: 1;
@@ -222,9 +222,22 @@ h2, h3 { margin: 12px 0; }
   padding: 44px;
   background: var(--red);
   color: var(--black);
+  position: relative;
   display: grid;
   grid-template-columns: 170px 1fr;
   gap: 30px;
+  cursor: pointer;
+}
+
+.pick-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pick-card-link:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
 }
 
 .pick-card .section-label { color: var(--black); }

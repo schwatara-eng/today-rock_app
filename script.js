@@ -27,11 +27,8 @@ async function loadSongs() {
 
     songs = await response.json();
     songsLoaded = true;
-
-    if (selectedMood) {
-      recommendButton.disabled = false;
-      selectionMessage.textContent = "오늘의 음악을 찾을 준비가 됐어요.";
-    }
+    recommendButton.disabled = false;
+    selectionMessage.textContent = "기분을 고르지 않으면 세 곡을 무작위로 추천해요.";
   } catch (error) {
     songsLoaded = false;
     recommendButton.disabled = true;
@@ -174,10 +171,23 @@ function scoreSong(song) {
   return score + Math.random() * 0.4;
 }
 
+function pickRandomSongs(songList, count) {
+  const shuffled = [...songList];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled.slice(0, count);
+}
+
 function showRecommendations() {
   if (!songsLoaded || songs.length === 0) return;
 
-  const picked = [...songs].sort((a, b) => scoreSong(b) - scoreSong(a)).slice(0, 3);
+  const picked = selectedMood
+    ? [...songs].sort((a, b) => scoreSong(b) - scoreSong(a)).slice(0, 3)
+    : pickRandomSongs(songs, 3);
   const list = document.querySelector("#song-list");
   list.innerHTML = "";
 
@@ -204,14 +214,18 @@ function showRecommendations() {
   });
 
   const top = picked[0];
+  const topSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(top.artist + " " + top.title)}`;
   document.querySelector("#result-summary").textContent =
-    `${weatherNames[currentWeather]} 날씨와 ${moodNames[selectedMood]} 마음을 함께 고려했어요.`;
+    selectedMood
+      ? `${weatherNames[currentWeather]} 날씨와 ${moodNames[selectedMood]} 마음을 함께 고려했어요.`
+      : "오늘은 기분 선택 없이 100곡 가운데 세 곡을 무작위로 골랐어요.";
   document.querySelector("#pick-card").innerHTML = `
+    <a class="pick-card-link" href="${topSearchUrl}" target="_blank" rel="noopener" aria-label="오늘의 원픽을 YouTube에서 듣기"></a>
     <div><p class="section-label">TODAY'S ONE PICK</p></div>
     <div>
       <h3>${top.title}</h3>
       <p><strong>${top.artist}</strong></p>
-      <p>${top.reason} 오늘의 첫 곡으로 가장 잘 어울립니다.</p>
+      <p>${selectedMood ? `${top.reason} 오늘의 첫 곡으로 가장 잘 어울립니다.` : "무작위로 만난 오늘의 첫 곡입니다."}</p>
     </div>
   `;
   resultSection.hidden = false;
