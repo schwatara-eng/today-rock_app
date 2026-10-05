@@ -79,15 +79,52 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
 }
 
 .hero::after {
-  content: "R";
+  content: "";
   position: absolute;
-  z-index: -1;
-  top: -60px;
-  right: 0;
-  color: rgba(73, 9, 3, 0.753);
-  font-family: "Black Han Sans", sans-serif;
-  font-size: clamp(22rem, 48vw, 42rem);
-  line-height: 1;
+  z-index: 0;
+
+  width: 46%;
+  height: 88%;
+  top: 4%;
+  right: 1%;
+
+  background:
+    url("images/IMG_0325.PNG")
+    center / contain no-repeat;
+
+  opacity: 0.52;
+
+  filter:
+    grayscale(25%)
+    sepia(25%)
+    saturate(135%)
+    contrast(110%);
+
+  mix-blend-mode: screen;
+
+  /* 상·하·좌·우 모두 흐려짐 */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 38%,
+    rgba(0, 0, 0, 0.9) 52%,
+    rgba(0, 0, 0, 0.45) 68%,
+    transparent 86%
+  );
+
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 38%,
+    rgba(0, 0, 0, 0.9) 52%,
+    rgba(0, 0, 0, 0.45) 68%,
+    transparent 86%
+  );
+
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow, .section-label {
@@ -263,7 +300,14 @@ footer {
 @media (max-width: 760px) {
   .site-header p { display: none; }
   .hero { min-height: 480px; padding-top: 80px; overflow: hidden; }
-  h1 { font-size: clamp(3.6rem, 19vw, 6rem); }
+  .h1 { font-size: clamp(3.6rem, 19vw, 6rem); }
+  .hero::after {
+    width: 72%;
+    height: 70%;
+    top: 10%;
+    right: -24%;
+    opacity: 0.28;
+  }
   .control-panel { grid-template-columns: 1fr; }
   .weather-card { padding-right: 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .mood-section { padding-left: 0; }
