@@ -83,14 +83,16 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
   position: absolute;
   z-index: 0;
 
-  width: 46%;
-  height: 88%;
-  top: 4%;
-  right: 1%;
+  width: 34%;
+  aspect-ratio: 1 / 1;
+  top: 20%;
+  right: -1%;
+
+  border-radius: 50%;
 
   background:
-    url("images/IMG_0325.PNG")
-    center / contain no-repeat;
+    url("images/IMG_1191.PNG")
+    center 15% / 130% auto no-repeat;
 
   opacity: 0.52;
 
@@ -102,21 +104,21 @@ main { width: min(1180px, 90vw); margin: 0 auto; }
 
   mix-blend-mode: screen;
 
-  /* 상·하·좌·우 모두 흐려짐 */
+  /* 원의 가장자리만 부드럽게 사라짐 */
   -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 38%,
-    rgba(0, 0, 0, 0.9) 52%,
-    rgba(0, 0, 0, 0.45) 68%,
-    transparent 86%
+    circle closest-side,
+    black 0%,
+    black 68%,
+    rgba(0, 0, 0, 0.75) 80%,
+    transparent 100%
   );
 
   mask-image: radial-gradient(
-    ellipse at center,
-    black 38%,
-    rgba(0, 0, 0, 0.9) 52%,
-    rgba(0, 0, 0, 0.45) 68%,
-    transparent 86%
+    circle closest-side,
+    black 0%,
+    black 68%,
+    rgba(0, 0, 0, 0.75) 80%,
+    transparent 100%
   );
 
   pointer-events: none;
