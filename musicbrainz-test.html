@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MusicBrainz 테스트</title>
+</head>
+<body>
+
+  <h1>록 음악 데이터</h1>
+  <div id="result"></div>
+
+  <script>
+    const url =
+      "https://musicbrainz.org/ws/2/recording/?query=tag:rock&fmt=json&limit=10";
+
+    async function getRockMusic() {
+
+      // 1. MusicBrainz API에 데이터 요청
+      const response = await fetch(url);
+
+      // 2. 받은 데이터를 JSON으로 변환
+      const data = await response.json();
+
+      // 3. recordings 배열 확인
+      console.log(data.recordings);
+
+      // 4. 필요한 데이터만 골라내기
+      const songs = data.recordings.map(song => {
+        return {
+          id: song.id,
+          title: song.title,
+          artist: song["artist-credit"]?.[0]?.name,
+          length: song.length
+        };
+      });
+
+      console.log(songs);
+
+      // 5. 화면에 출력
+      const result = document.querySelector("#result");
+
+      songs.forEach(song => {
+        result.innerHTML += `
+          <p>
+            <strong>${song.title}</strong><br>
+            ${song.artist}
+          </p>
+        `;
+      });
+    }
+
+    getRockMusic();
+  </script>
+
+</body>
+</html>
