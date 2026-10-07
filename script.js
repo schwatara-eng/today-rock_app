@@ -232,5 +232,107 @@ function showRecommendations() {
   resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+// --------------------------------------------------
+// NME 최신 뉴스 불러오기
+// --------------------------------------------------
+// 브라우저가 NME RSS에 직접 접근하면 CORS 문제가 발생한다.
+// 그래서 브라우저는 우리가 만든 Node.js 서버에 요청하고,
+// Node.js 서버가 NME RSS를 대신 가져와 JSON으로 변환해준다.
+//
+// 데이터 흐름:
+// NME RSS(XML)
+// → Node.js server.js
+// → JSON
+// → fetch()
+// → TODAY'S ROCK 화면
+async function loadNews() {
+  const newsList = document.querySelector("#news-list");
+
+  try {
+    // 우리가 만든 Node.js API에 GET 요청을 보낸다.
+    const response = await fetch("http://localhost:3000/api/news");
+
+    // 서버에서 오류 응답이 왔다면 catch로 이동한다.
+    if (!response.ok) {
+      throw new Error("뉴스 데이터를 불러오지 못했습니다.");
+    }
+
+    // server.js가 JSON으로 보내주기 때문에
+    // response.json()으로 JavaScript 데이터로 변환한다.
+    const newsItems = await response.json();
+
+    // '불러오는 중...' 문구를 제거한다.
+    newsList.innerHTML = "";
+
+    // 받아온 기사 배열을 하나씩 반복하면서 화면에 출력한다.
+    newsItems.forEach((article, index) => {
+
+      // RSS의 긴 날짜를 한국 화면에서 읽기 쉽게 바꾼다.
+      const date = new Date(article.pubDate);
+
+      const formattedDate = date.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      });
+
+      // 첫 번째 기사는 LATEST,
+      // 나머지는 NEWS 02, NEWS 03으로 표시한다.
+      const label =
+        index === 0
+          ? "LATEST"
+          : `NEWS 0${index + 1}`;
+
+      // insertAdjacentHTML을 이용해
+      // 실제 NME 기사 하나를 HTML article로 추가한다.
+      newsList.insertAdjacentHTML(
+        "beforeend",
+        `
+          <article class="news-item ${index === 0 ? "lead-news" : ""}">
+            <p class="news-date">${label} · ${formattedDate}</p>
+
+            <h3>
+              <a
+                href="${article.link}"
+                target="_blank"
+                rel="noopener"
+              >
+                ${article.title}
+              </a>
+            </h3>
+
+            ${
+              index === 0
+                ? `<p>${article.description}</p>`
+                : ""
+            }
+
+            <a
+              class="news-link"
+              href="${article.link}"
+              target="_blank"
+              rel="noopener"
+            >
+              NME 원문 보기 ↗
+            </a>
+          </article>
+        `
+      );
+    });
+
+  } catch (error) {
+    console.error(error);
+
+    // Node 서버가 꺼져 있거나 RSS 요청에 실패해도
+    // 화면 전체가 망가지지 않고 뉴스 영역에만 오류를 표시한다.
+    newsList.innerHTML = `
+      <p class="news-loading">
+        뉴스를 불러오지 못했습니다.
+      </p>
+    `;
+  }
+}
+
 loadWeather();
 loadSongs();
+loadNews();

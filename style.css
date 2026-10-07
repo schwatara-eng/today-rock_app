@@ -321,3 +321,235 @@ footer {
   .pick-card { grid-template-columns: 1fr; padding: 30px; }
   footer { display: block; }
 }
+
+/* =========================================================
+   2단 편집 레이아웃
+   왼쪽은 뉴스·뮤지션을 읽는 날개단, 오른쪽은 추천 기능 본문이다.
+   기존 추천 기능의 id/class는 유지해 JavaScript 로직을 건드리지 않는다.
+   ========================================================= */
+.content-layout {
+  border-top: 1px solid var(--paper);
+  display: grid;
+  grid-template-columns: minmax(220px, 27%) minmax(0, 73%);
+  align-items: start;
+}
+
+.side-column {
+  min-width: 0;
+  padding: 48px 3vw 80px 0;
+  border-right: 1px solid var(--line);
+}
+
+.main-column {
+  min-width: 0;
+  padding-left: 4vw;
+}
+
+/* 오른쪽 본문 안에서는 날씨와 기분을 세로로 쌓아 폭을 확보한다. */
+.content-layout .control-panel {
+  border-top: 0;
+  display: block;
+}
+
+.content-layout .weather-card {
+  padding: 48px 0 34px;
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.content-layout .mood-section {
+  padding: 42px 0 58px;
+}
+
+.content-layout .weather-icon { right: 0; }
+.content-layout .text-button { margin-top: 42px; }
+
+.news-panel h2,
+.artist-panel h2 {
+  margin: 10px 0 28px;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.news-list { border-top: 1px solid var(--line); }
+.news-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.news-item h3 { margin: 6px 0 8px; font-size: 1rem; line-height: 1.45; }
+.news-item p:not(.news-date) { margin: 0; color: var(--gray); font-size: .8rem; line-height: 1.65; }
+.news-date { margin: 0; color: var(--red); font-size: .66rem; font-weight: 700; letter-spacing: .12em; }
+.news-link-placeholder,
+.artist-link-placeholder { display: inline-block; margin-top: 14px; color: var(--yellow); font-size: .76rem; }
+
+.artist-panel {
+  margin-top: 64px;
+  padding-top: 42px;
+  border-top: 1px solid var(--paper);
+}
+.artist-image-placeholder {
+  aspect-ratio: 4 / 3;
+  margin: 24px 0;
+  border: 1px solid var(--line);
+  background: rgba(16,16,16,.48);
+  display: grid;
+  place-items: center;
+  color: var(--gray);
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 2rem;
+  letter-spacing: .08em;
+}
+.artist-panel h3 { font-size: 1.15rem; line-height: 1.5; }
+.artist-copy { color: var(--gray); font-size: .82rem; line-height: 1.7; }
+
+/* 결과 영역은 오른쪽 본문 폭을 그대로 사용한다. */
+.content-layout .results { padding-top: 72px; }
+.content-layout .result-heading { display: block; }
+.content-layout #result-summary { margin-top: 12px; max-width: 100%; }
+.content-layout .song-list { gap: 12px; }
+.content-layout .song-card { min-width: 0; padding: 20px; }
+.content-layout .song-card h3 { overflow-wrap: anywhere; }
+.content-layout .song-links { flex-direction: column; }
+.content-layout .pick-card { grid-template-columns: 130px 1fr; padding: 34px; }
+
+@media (max-width: 980px) {
+  .content-layout { grid-template-columns: 32% 68%; }
+  .side-column { padding-right: 2.5vw; }
+  .main-column { padding-left: 3vw; }
+  .content-layout .song-list { grid-template-columns: 1fr; }
+  .content-layout .song-card { min-height: 280px; }
+  .content-layout .song-links { flex-direction: row; }
+}
+
+@media (max-width: 760px) {
+  /* 모바일에서는 핵심 기능인 오늘의 록을 먼저 보여준다. */
+  .content-layout { display: flex; flex-direction: column; }
+  .main-column { order: 1; width: 100%; padding-left: 0; }
+  .side-column {
+    order: 2;
+    width: 100%;
+    padding: 64px 0 30px;
+    border-right: 0;
+    border-top: 1px solid var(--paper);
+  }
+  .content-layout .pick-card { grid-template-columns: 1fr; }
+}
+
+
+/* =========================================================
+   2026-10-07 UI 개편 2차
+   - 날개단 : 본문 = 27 : 73
+   - 히어로 얼굴 이미지를 제거하고 원형 날씨 패널을 배치
+   - 본문 WEATHER 블록은 제거하고 MOOD부터 시작
+   ========================================================= */
+
+/* 기존 hero::after 얼굴 이미지는 더 이상 사용하지 않는다. */
+.hero::after {
+  display: none;
+}
+
+/* 메인 카피 오른쪽의 원형 날씨 패널.
+   absolute로 배치해 큰 제목의 흐름을 깨지 않게 한다. */
+.hero-weather {
+  position: absolute;
+  z-index: 2;
+  top: 105px;
+  right: 1%;
+  width: clamp(250px, 25vw, 330px);
+  aspect-ratio: 1 / 1;
+  padding: 42px;
+  border: 1px solid rgba(242, 239, 232, .32);
+  border-radius: 50%;
+  background: rgba(16, 16, 16, .34);
+  backdrop-filter: blur(7px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-weather .section-label { margin: 0 0 8px; }
+.hero-weather-icon {
+  margin: 2px 0 4px;
+  color: var(--yellow);
+  font-size: 2.8rem;
+  line-height: 1;
+}
+.hero-weather h3 {
+  margin: 7px 0 4px;
+  max-width: 210px;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  line-height: 1.3;
+}
+.hero-weather #weather-detail {
+  margin: 4px 0 0;
+  font-size: .82rem;
+}
+.hero-weather-button {
+  margin-top: 18px;
+  font-size: .72rem;
+}
+
+/* 데스크톱에서는 왼쪽 콘텐츠를 27%, 추천 본문을 73% 사용한다. */
+.content-layout {
+  grid-template-columns: minmax(220px, 27%) minmax(0, 73%);
+}
+
+/* 날씨가 히어로로 이동했으므로 본문은 MOOD부터 시작한다. */
+.content-layout .mood-section {
+  padding-top: 48px;
+}
+
+@media (max-width: 980px) {
+  .content-layout { grid-template-columns: 29% 71%; }
+  .hero-weather {
+    right: 0;
+    width: 240px;
+    padding: 34px;
+  }
+}
+
+@media (max-width: 760px) {
+  /* 모바일에서는 원을 카피 아래에 일반 흐름으로 내려 겹침을 막는다. */
+  .hero { min-height: auto; padding-bottom: 55px; }
+  .hero-weather {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(270px, 78vw);
+    margin: 48px auto 0;
+    padding: 38px;
+  }
+}
+
+/* NME 기사 제목을 클릭할 수 있게 만들되
+   기존 TODAY'S ROCK의 타이포그래피는 그대로 유지한다. */
+.news-item h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-item h3 a:hover {
+  color: var(--yellow);
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--yellow);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+.news-loading {
+  color: var(--gray);
+  line-height: 1.7;
+}

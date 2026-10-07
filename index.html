@@ -21,20 +21,46 @@
       <p class="eyebrow">VOLUME 01 — DAILY SOUNDTRACK</p>
       <h1>오늘은 어떤<br><span>록이 필요해?</span></h1>
       <p class="intro">지금의 날씨와 마음을 골라주세요.<br>오늘을 통과할 세 곡을 찾아드릴게요.</p>
+
+      <!-- 기존 얼굴 이미지를 대신하는 원형 날씨 패널.
+           기존 weather 관련 id를 그대로 사용해 JavaScript 수정 없이 데이터를 표시한다. -->
+      <article class="hero-weather" aria-label="현재 날씨">
+        <p class="section-label">01 / WEATHER</p>
+        <div id="weather-icon" class="hero-weather-icon" aria-hidden="true">◌</div>
+        <h3 id="weather-status">날씨를 불러오는 중</h3>
+        <p id="weather-detail">잠시만 기다려주세요.</p>
+        <button id="location-button" class="text-button hero-weather-button" type="button">내 위치로 다시 찾기</button>
+      </article>
     </section>
 
-    <section class="control-panel" aria-labelledby="selection-title">
-      <h2 id="selection-title" class="sr-only">날씨와 기분 선택</h2>
+    <section class="content-layout">
+      <aside class="side-column" aria-label="오늘의 록 콘텐츠">
+        <section class="news-panel">
+          <p class="section-label">04 / ROCK NEWS</p>
+          <h2>오늘의 뉴스</h2>
+<!--
+  NME 뉴스가 JavaScript를 통해 이 영역에 들어온다.
+  HTML에 기사를 직접 적어두지 않고, script.js가 서버에서 받은
+  최신 기사 데이터를 이용해 article 요소를 만들어준다.
+-->
+<div id="news-list" class="news-list">
+  <p class="news-loading">NME 최신 뉴스를 불러오는 중...</p>
+</div>
+        </section>
 
-      <article class="weather-card">
-        <div>
-          <p class="section-label">01 / WEATHER</p>
-          <h3 id="weather-status">날씨를 불러오는 중</h3>
-          <p id="weather-detail">잠시만 기다려주세요.</p>
-        </div>
-        <div id="weather-icon" class="weather-icon" aria-hidden="true">◌</div>
-        <button id="location-button" class="text-button" type="button">내 위치로 다시 찾기</button>
-      </article>
+        <section class="artist-panel">
+          <p class="section-label">05 / ARTIST OF THE DAY</p>
+          <h2>오늘의 뮤지션</h2>
+          <div class="artist-image-placeholder" aria-hidden="true">ARTIST</div>
+          <h3>오늘의 뮤지션을 준비하고 있어요.</h3>
+          <p class="artist-copy">뮤지션 소개, 주요 앨범과 활동 정보, 에디터 코멘트를 이곳에 담습니다.</p>
+          <span class="artist-link-placeholder">대표곡 링크 예정 ↗</span>
+        </section>
+      </aside>
+
+      <div class="main-column">
+        <section class="control-panel" aria-labelledby="selection-title">
+      <h2 id="selection-title" class="sr-only">기분 선택</h2>
 
       <div class="mood-section">
         <p class="section-label">02 / MOOD</p>
@@ -52,7 +78,7 @@
         </button>
         <p id="selection-message" class="selection-message" aria-live="polite">기분을 하나 골라주세요.</p>
       </div>
-    </section>
+        </section>
 
     <section id="result-section" class="results" aria-labelledby="result-title" hidden>
       <div class="result-heading">
@@ -64,6 +90,8 @@
       </div>
       <div id="song-list" class="song-list"></div>
       <article id="pick-card" class="pick-card"></article>
+    </section>
+      </div>
     </section>
   </main>
 
