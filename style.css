@@ -258,15 +258,18 @@ h2, h3 { margin: 12px 0; }
 
 .pick-card {
   margin-top: 50px;
-  padding: 44px;
+  padding: 34px;
   background: var(--red);
   color: var(--black);
   position: relative;
-  display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
   cursor: pointer;
 }
+
+.pick-card > div { width: 100%; min-width: 0; }
 
 .pick-card-link {
   position: absolute;
@@ -279,8 +282,23 @@ h2, h3 { margin: 12px 0; }
   outline-offset: 4px;
 }
 
-.pick-card .section-label { color: var(--black); }
-.pick-card h3 { font-family: "Black Han Sans"; font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 400; }
+.pick-card .section-label {
+  color: var(--black);
+  font-size: 11px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.pick-card h3 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 30pt;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+  overflow-wrap: anywhere;
+}
+
 .pick-card p { line-height: 1.7; }
 
 footer {
@@ -318,7 +336,7 @@ footer {
   .result-heading { display: block; }
   .song-list { grid-template-columns: 1fr; }
   .song-card { min-height: 280px; }
-  .pick-card { grid-template-columns: 1fr; padding: 30px; }
+  .pick-card { padding: 30px; }
   footer { display: block; }
 }
 
@@ -434,7 +452,7 @@ footer {
     border-right: 0;
     border-top: 1px solid var(--paper);
   }
-  .content-layout .pick-card { grid-template-columns: 1fr; }
+
 }
 
 
