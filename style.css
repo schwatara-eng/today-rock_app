@@ -1040,3 +1040,15 @@ footer {
   object-fit: cover;
   border-radius: 4px;
 }
+
+/* 에디터 코멘트 제목 및 구분선 */
+.artist-feature-editor > .section-label {
+  margin: -6px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e43d30;
+  color: #e43d30;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
