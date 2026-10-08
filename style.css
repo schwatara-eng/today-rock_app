@@ -92,44 +92,6 @@ main {
   position: relative;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-
-  width: 34%;
-  aspect-ratio: 1 / 1;
-  top: 20%;
-  right: -1%;
-
-  border-radius: 50%;
-
-  background:
-    url("images/IMG_1191.PNG") center 15% / 130% auto no-repeat;
-
-  opacity: 0.52;
-
-  filter:
-    grayscale(25%) sepia(25%) saturate(135%) contrast(110%);
-
-  mix-blend-mode: screen;
-
-  /* 원의 가장자리만 부드럽게 사라짐 */
-  -webkit-mask-image: radial-gradient(circle closest-side,
-      black 0%,
-      black 68%,
-      rgba(0, 0, 0, 0.75) 80%,
-      transparent 100%);
-
-  mask-image: radial-gradient(circle closest-side,
-      black 0%,
-      black 68%,
-      rgba(0, 0, 0, 0.75) 80%,
-      transparent 100%);
-
-  pointer-events: none;
-}
-
 .hero>* {
   position: relative;
   z-index: 1;
@@ -464,7 +426,7 @@ footer {
     overflow: hidden;
   }
 
-  .h1 {
+  h1 {
     font-size: clamp(3.6rem, 19vw, 6rem);
   }
 
@@ -619,19 +581,6 @@ footer {
   border-top: 1px solid var(--paper);
 }
 
-.artist-image-placeholder {
-  aspect-ratio: 4 / 3;
-  margin: 24px 0;
-  border: 1px solid var(--line);
-  background: rgba(16, 16, 16, .48);
-  display: grid;
-  place-items: center;
-  color: var(--gray);
-  font-family: "Black Han Sans", sans-serif;
-  font-size: 2rem;
-  letter-spacing: .08em;
-}
-
 .artist-panel h3 {
   font-size: 1.15rem;
   line-height: 1.5;
@@ -736,11 +685,6 @@ footer {
    - 히어로 얼굴 이미지를 제거하고 원형 날씨 패널을 배치
    - 본문 WEATHER 블록은 제거하고 MOOD부터 시작
    ========================================================= */
-
-/* 기존 hero::after 얼굴 이미지는 더 이상 사용하지 않는다. */
-.hero::after {
-  display: none;
-}
 
 /* 메인 카피 오른쪽의 원형 날씨 패널.
    absolute로 배치해 큰 제목의 흐름을 깨지 않게 한다. */
@@ -875,24 +819,10 @@ footer {
   margin: 22px 0 18px
 }
 
-.artist-feature-name {
-  font-size: 11px;
-  letter-spacing: .2em;
-  font-weight: 700;
-  opacity: .6
-}
-
 .artist-feature-header h3 {
   font-size: clamp(26px, 3vw, 38px);
   line-height: 1.2;
   margin: 8px 0 14px
-}
-
-.artist-feature-header h3 span {
-  display: block;
-  font-size: .48em;
-  opacity: .65;
-  margin-top: 6px
 }
 
 .artist-feature-lead {
@@ -943,16 +873,6 @@ footer {
   color: #302920;
   border-left: 3px solid #bd4d43;
   border-radius: 0 8px 8px 0
-}
-
-.artist-feature-editor h4 {
-  margin: 9px 0;
-  font-size: 18px;
-  color: #302920
-}
-
-.artist-feature-editor>span {
-  color: #a63e34
 }
 
 .artist-feature-editor p:last-child {
@@ -1016,7 +936,7 @@ footer {
 .artist-feature-sources {
   margin-top: 24px;
   padding-top: 14px;
-  border-top: 1px solid rgba(128, 128, 128, .25);
+  border-top: none;
   font-size: 11px;
   line-height: 1.8;
   opacity: .75
@@ -1053,316 +973,181 @@ footer {
 }
 
 
-/* ARTIST OF THE DAY — full-width editorial feature */
+
+/* =========================================================
+   ARTIST OF THE DAY — compact editorial layout
+   Photo left; introduction, comment, history and tracks right.
+   ========================================================= */
 main > .artist-feature {
-  margin: 0 0 100px;
-  padding: 70px 0 0;
+  margin: 0 0 50px;
+  padding: 42px 0 0;
   border-top: 1px solid var(--paper);
 }
-main > .artist-feature h2 {
-  margin-bottom: 30px;
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  white-space: normal;
+main > .artist-feature > h2 {
+  margin: 6px 0 22px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
-main > .artist-feature .artist-feature-header {
-  margin: 0 0 34px;
-}
-main > .artist-feature .artist-feature-header h3 {
-  font-size: clamp(2.4rem, 5.5vw, 5.5rem);
-}
-main > .artist-feature .artist-feature-lead {
-  max-width: 720px;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-}
-main > .artist-feature .artist-feature-photo {
-  float: left;
-  width: min(43%, 490px);
-  margin: 0 5% 24px 0;
-}
-main > .artist-feature .artist-feature-photo img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-main > .artist-feature .artist-copy {
-  font-size: 1rem;
-  line-height: 1.95;
-  color: var(--paper);
-}
-main > .artist-feature .artist-feature-subtitle {
-  font-size: 1.4rem;
-  margin-top: 36px;
-}
-main > .artist-feature .artist-feature-history {
+.artist-editorial-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 32px;
-  font-size: .95rem;
+  grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
+  gap: 4%;
+  align-items: stretch;
 }
-main > .artist-feature .artist-feature-history li p {
-  font-size: .9rem;
-  line-height: 1.8;
-}
-main > .artist-feature .artist-feature-editor {
-  clear: both;
-  margin-top: 55px;
-  padding: 28px 34px;
-}
-main > .artist-feature .artist-feature-editor p:last-child {
-  max-width: 850px;
-  font-size: 1rem;
-  line-height: 1.95;
-}
-main > .artist-feature .artist-feature-tracks {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-main > .artist-feature .artist-feature-tracks a {
-  min-height: 78px;
-}
-@media (max-width: 760px) {
-  main > .artist-feature {
-    margin-bottom: 60px;
-    padding-top: 48px;
-  }
-  main > .artist-feature .artist-feature-photo {
-    float: none;
-    width: 100%;
-    max-width: 460px;
-    margin: 0 0 28px;
-  }
-  main > .artist-feature .artist-feature-history {
-    grid-template-columns: 1fr;
-  }
-  main > .artist-feature .artist-feature-tracks {
-    grid-template-columns: 1fr;
-  }
-  main > .artist-feature .artist-feature-editor {
-    padding: 22px;
-  }
-}
-
-/* 2026-10-08: left photo + three square tracks / right article + comment */
-main > .artist-feature .artist-editorial-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 43%) minmax(0, 1fr);
-  gap: 5%;
-  align-items: start;
-}
-main > .artist-feature .artist-editorial-left,
-main > .artist-feature .artist-editorial-right { min-width: 0; }
-main > .artist-feature .artist-feature-photo {
-  float: none;
+.artist-editorial-left,
+.artist-editorial-right { min-width: 0; }
+.artist-editorial-left { position: relative; }
+.artist-editorial-left .artist-feature-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  margin: 0 0 24px;
+  height: 100%;
+  margin: 0;
 }
-main > .artist-feature .artist-feature-tracks {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+.artist-editorial-left .artist-feature-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
 }
-main > .artist-feature .artist-feature-tracks li { min-width: 0; }
-main > .artist-feature .artist-feature-tracks a {
-  aspect-ratio: 1 / 1;
-  min-height: 0;
-  padding: 12px;
+.artist-editorial-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   gap: 8px;
 }
-main > .artist-feature .artist-feature-tracks a::before { flex: none; }
-main > .artist-feature .artist-feature-tracks a > span:first-child { flex: 1; width: 100%; }
-main > .artist-feature .artist-feature-tracks a > span:last-child { align-self: flex-end; }
-main > .artist-feature .artist-feature-tracks strong { font-size: clamp(11px, 1.1vw, 15px); line-height: 1.35; overflow-wrap: anywhere; }
-main > .artist-feature .artist-feature-tracks small { font-size: 11px; }
-main > .artist-feature .artist-feature-editor {
-  clear: none;
-  margin: 34px 0 0;
-  padding: 24px 26px;
+.artist-editorial-right .artist-feature-header { margin: 0; }
+.artist-editorial-right .artist-feature-header h3 {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 0 6px;
+  font-size: clamp(1.65rem, 3vw, 2.65rem);
+  line-height: 1.12;
 }
-main > .artist-feature .artist-feature-history { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (max-width: 760px) {
-  main > .artist-feature .artist-editorial-grid { grid-template-columns: 1fr; gap: 36px; }
-  main > .artist-feature .artist-feature-photo { max-width: none; }
-  main > .artist-feature .artist-feature-history { grid-template-columns: 1fr; }
-  main > .artist-feature .artist-feature-tracks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  main > .artist-feature .artist-feature-tracks a { padding: 8px; }
-  main > .artist-feature .artist-feature-tracks strong { font-size: 11px; }
+.artist-editorial-right .artist-feature-header h3 span[lang="en"] {
+  display: inline;
+  font-size: 1em;
+  opacity: 1;
 }
-
-/* Compact bottom row: editor comment left, three tracks right */
-main > .artist-feature .artist-feature-bottom {
-  display: grid;
-  grid-template-columns: minmax(0, 43%) minmax(0, 1fr);
-  gap: 5%;
-  align-items: start;
-  margin-top: 28px;
+.artist-editorial-right .artist-feature-header h3 span[lang="ko"] {
+  display: inline;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: .46em;
+  font-weight: 700;
+  opacity: .75;
 }
-main > .artist-feature .artist-feature-bottom .artist-feature-editor {
+.artist-editorial-right .artist-feature-lead {
   margin: 0;
-  padding: 20px 24px;
+  font-size: .92rem;
+  line-height: 1.5;
 }
-main > .artist-feature .artist-feature-bottom .artist-feature-editor p:last-child {
-  font-size: .88rem;
-  line-height: 1.8;
+.artist-editorial-right .artist-copy {
+  margin: 0;
+  color: var(--gray);
+  font-size: .78rem;
+  line-height: 1.65;
 }
-main > .artist-feature .artist-feature-track-group { min-width: 0; }
-main > .artist-feature .artist-feature-track-group .artist-feature-subtitle {
-  margin: 0 0 14px;
+.artist-editorial-right .artist-feature-subtitle {
+  margin: 20px 0 20px;
+  font-size: 1rem;
 }
-main > .artist-feature .artist-feature-track-group .artist-feature-tracks {
+.artist-editorial-right .artist-feature-editor {
+  margin: 10px 0 20px;
+  padding: 14px 18px;
+  clear: none;
+}
+.artist-editorial-right .artist-feature-editor > .section-label {
+  margin: 0 0 9px;
+  padding-bottom: 8px;
+}
+.artist-editorial-right .artist-feature-editor p:last-child {
+  margin: 0;
+  font-size: .73rem;
+  line-height: 1.55;
+}
+.artist-editorial-right .artist-feature-history {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+.artist-editorial-right .artist-feature-history li { padding: 7px 0; }
+.artist-editorial-right .artist-feature-history strong {
+  font-size: .75rem;
+  line-height: 1.35;
+}
+.artist-editorial-right .artist-feature-history li p {
+  margin-top: 3px;
+  font-size: .71rem;
+  line-height: 1.45;
+}
+.artist-feature-track-group { min-width: 0; }
+.artist-feature-track-group .artist-feature-subtitle { margin: 0 0 5px; }
+.artist-feature-track-group .artist-feature-tracks {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 7px;
+  align-items: stretch;
 }
-main > .artist-feature .artist-feature-track-group .artist-feature-tracks a {
-  aspect-ratio: 1 / 1;
-  min-height: 0;
-  padding: 12px;
-}
-@media (max-width: 760px) {
-  main > .artist-feature .artist-feature-bottom {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-}
-
-/* Compact artist feature: photo left, all text and tracks right */
-main > .artist-feature { padding-top: 42px; margin-bottom: 50px; }
-main > .artist-feature > h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); margin: 6px 0 22px; }
-main > .artist-feature .artist-editorial-grid { display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 1fr); gap: 4%; align-items: stretch; }
-main > .artist-feature .artist-editorial-left { display: flex; min-height: 0; }
-main > .artist-feature .artist-feature-photo { margin: 0; width: 100%; height: 100%; }
-main > .artist-feature .artist-feature-photo img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center; }
-main > .artist-feature .artist-editorial-right { display: flex; flex-direction: column; gap: 12px; }
-main > .artist-feature .artist-feature-header { margin: 0; }
-main > .artist-feature .artist-feature-header h3 { font-size: clamp(1.55rem, 2.8vw, 2.5rem); margin: 4px 0 6px; }
-main > .artist-feature .artist-feature-lead { font-size: .92rem; line-height: 1.5; margin: 0; }
-main > .artist-feature .artist-copy { font-size: .78rem; line-height: 1.65; margin: 0; color: var(--gray); }
-main > .artist-feature .artist-feature-subtitle { font-size: 1rem; margin: 4px 0 7px; }
-main > .artist-feature .artist-feature-history { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 16px; }
-main > .artist-feature .artist-feature-history li { padding: 7px 0; }
-main > .artist-feature .artist-feature-history strong { font-size: .75rem; line-height: 1.35; }
-main > .artist-feature .artist-feature-history li p { font-size: .71rem; line-height: 1.45; margin-top: 3px; }
-main > .artist-feature .artist-feature-editor { margin: 0; padding: 14px 18px; }
-main > .artist-feature .artist-feature-editor > .section-label { margin: 0 0 9px; padding-bottom: 8px; }
-main > .artist-feature .artist-feature-editor p:last-child { font-size: .73rem; line-height: 1.55; }
-main > .artist-feature .artist-feature-track-group .artist-feature-subtitle { margin: 0 0 8px; }
-main > .artist-feature .artist-feature-tracks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
-main > .artist-feature .artist-feature-tracks a { aspect-ratio: auto; min-height: 70px; padding: 9px; gap: 3px; }
-main > .artist-feature .artist-feature-tracks strong { font-size: .72rem; }
-main > .artist-feature .artist-feature-tracks small { font-size: .65rem; }
-main > .artist-feature .artist-feature-sources { margin-top: 14px; }
-@media (max-width: 760px) {
-  main > .artist-feature .artist-editorial-grid { grid-template-columns: 1fr; gap: 20px; }
-  main > .artist-feature .artist-feature-photo { height: auto; }
-  main > .artist-feature .artist-feature-photo img { aspect-ratio: 4 / 3; height: auto; }
-  main > .artist-feature .artist-feature-history { grid-template-columns: 1fr; }
-}
-
-/* Larger track labels; allow multi-line song titles */
-main > .artist-feature .artist-feature-tracks strong {
-  font-size: clamp(14px, 1.25vw, 17px);
-  line-height: 1.35;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-main > .artist-feature .artist-feature-tracks small {
-  font-size: clamp(12px, 1vw, 14px);
-  line-height: 1.4;
-  white-space: normal;
-}
-main > .artist-feature .artist-feature-tracks a {
-  min-height: 95px;
+.artist-feature-track-group .artist-feature-tracks li { min-width: 0; }
+.artist-feature-track-group .artist-feature-tracks a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 3px;
+  min-height: 76px;
   height: auto;
+  aspect-ratio: auto;
+  padding: 8px 25px 8px 9px;
+  overflow: visible;
 }
+.artist-feature-track-group .artist-feature-tracks a::before {
+  display: block;
+  flex: none;
+  text-align: center;
+}
+.artist-feature-track-group .artist-feature-tracks a > span:first-child {
+  flex: none;
+  min-width: 0;
+}
+.artist-feature-track-group .artist-feature-tracks a > span:last-child {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  line-height: 1;
+}
+.artist-feature-track-group .artist-feature-tracks strong {
+  font-size: 14px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.artist-feature-track-group .artist-feature-tracks small {
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.2;
+  white-space: normal;
+}
+main > .artist-feature .artist-feature-sources { margin-top: 14px; }
+
 @media (max-width: 760px) {
-  main > .artist-feature .artist-feature-tracks strong { font-size: 13px; }
-  main > .artist-feature .artist-feature-tracks small { font-size: 11px; }
-}
-
-/* 2026-10-08: compact track cards and matching photo frame */
-@media (min-width: 761px) {
-  main > .artist-feature .artist-feature-tracks a {
-    min-height: 68px;
-    padding: 7px 9px;
-    gap: 2px;
-  }
-  main > .artist-feature .artist-feature-tracks strong {
-    font-size: clamp(14px, 1.25vw, 17px);
-    line-height: 1.2;
-  }
-  main > .artist-feature .artist-feature-tracks small {
-    font-size: 12px;
-    line-height: 1.2;
-    margin-top: 2px;
-  }
-  main > .artist-feature .artist-editorial-left {
-    position: relative;
-    min-height: 0;
-  }
-  main > .artist-feature .artist-feature-photo {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-  }
-  main > .artist-feature .artist-feature-photo img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-/* 2026-10-08 correction: override the earlier square-card rule explicitly. */
-@media (min-width: 761px) {
-  main > .artist-feature .artist-editorial-right {
-    gap: 8px;
-  }
-  main > .artist-feature .artist-feature-track-group .artist-feature-subtitle {
-    margin: 0 0 5px;
-  }
-  main > .artist-feature .artist-feature-track-group .artist-feature-tracks {
-    gap: 7px;
-    align-items: stretch;
-  }
-  main > .artist-feature .artist-feature-track-group .artist-feature-tracks a {
-    aspect-ratio: auto;
-    min-height: 0;
-    height: 76px;
-    padding: 6px 8px;
-    gap: 4px;
-    align-items: center;
-    overflow: hidden;
-  }
-  main > .artist-feature .artist-feature-track-group .artist-feature-tracks strong {
-    font-size: 14px;
-    line-height: 1.18;
-    overflow-wrap: anywhere;
-  }
-  main > .artist-feature .artist-feature-track-group .artist-feature-tracks small {
-    font-size: 11px;
-    line-height: 1.2;
-    margin-top: 3px;
-  }
-  main > .artist-feature .artist-editorial-grid {
-    align-items: stretch;
-  }
-  main > .artist-feature .artist-editorial-left {
-    position: relative;
-    min-height: 0;
-  }
-  main > .artist-feature .artist-editorial-left .artist-feature-photo {
-    position: absolute;
-    inset: 0;
+  /* Keep the mobile main-content-first layout despite desktop overrides. */
+  .content-layout { display: flex; flex-direction: column; }
+  .artist-editorial-grid { grid-template-columns: 1fr; gap: 20px; }
+  .artist-editorial-left .artist-feature-photo {
+    position: static;
     width: 100%;
-    height: 100%;
-    margin: 0;
+    height: auto;
   }
-  main > .artist-feature .artist-editorial-left .artist-feature-photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: auto;
-    object-fit: cover;
+  .artist-editorial-left .artist-feature-photo img {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
+  .artist-editorial-right .artist-feature-history { grid-template-columns: 1fr; }
+  .artist-feature-track-group .artist-feature-tracks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .artist-feature-track-group .artist-feature-tracks strong { font-size: 13px; }
+  .artist-feature-track-group .artist-feature-tracks small { font-size: 11px; }
 }
