@@ -1,66 +1,133 @@
 
 const { XMLParser } = require("fast-xml-parser");
 
+// Google Cloud Translation API
+async function translateTexts(texts) {
+  const apiKey = process.env.GOOGLE_TRANSLATE_API_KEY;
+
+  if (!apiKey) {
+    console.warn("Google 번역 API 키가 없습니다.");
+    return texts;
+  }
+
+  const response = await fetch(
+    `https://translation.googleapis.com/language/translate/v2?key=${encodeURIComponent(apiKey)}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        q: texts,
+        source: "en",
+        target: "ko",
+        format: "text"
+      })
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Google 번역 오류: ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  // 번역 결과의 HTML 엔티티 복원
+  return data.data.translations.map((item) =>
+    decodeHtml(item.translatedText)
+  );
+}
+
+function decodeHtml(text = "") {
+  return String(text)
+    .replace(/&#(\d+);/g, (_, n) =>
+      String.fromCodePoint(Number(n))
+    )
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) =>
+      String.fromCodePoint(parseInt(n, 16))
+    )
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function cleanHtml(text = "") {
+  return decodeHtml(
+    String(text)
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "GET 요청만 허용됩니다." });
+    return res.status(405).json({
+      error: "GET 요청만 허용됩니다."
+    });
   }
 
   try {
-    // NME 음악 뉴스 RSS 주소
-    const rssUrl = "https://www.nme.com/news/music/feed";
-
-    // NME 서버에서 RSS 데이터 가져오기
-    const response = await fetch(rssUrl);
+    // NME 음악 뉴스 RSS 수집
+    const response = await fetch(
+      "https://www.nme.com/news/music/feed"
+    );
 
     if (!response.ok) {
-      throw new Error(`NME 응답 오류: ${response.status}`);
+      throw new Error(`NME RSS 오류: ${response.status}`);
     }
 
-    // XML 데이터를 JavaScript 객체로 변환
-    const rssData = await response.text();
+    const xml = await response.text();
     const parser = new XMLParser();
-    const parsedRss = parser.parse(rssData);
+    const parsed = parser.parse(xml);
 
-    const items = parsedRss.rss.channel.item;
-
-    // HTML 태그와 일부 특수문자 제거
-    function cleanHtml(text = "") {
-      return String(text)
-        .replace(/<[^>]*>/g, " ")
-        .replace(/&#8217;|&#x2019;/g, "'")
-        .replace(/&#8216;|&#x2018;/g, "'")
-        .replace(/&#8220;|&#x201C;/g, '"')
-        .replace(/&#8221;|&#x201D;/g, '"')
-        .replace(/&#038;|&amp;/g, "&")
-        .replace(/&nbsp;/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
+    const items = parsed?.rss?.channel?.item;
+    if (!items) {
+      throw new Error("RSS 기사 목록을 찾을 수 없습니다.");
     }
 
-    // 최신 기사 3개를 JSON 배열로 만들기
-    const news = items.slice(0, 3).map((item) => {
-      const cleanDescription = cleanHtml(item.description);
-
-      return {
+    const articles = (Array.isArray(items) ? items : [items])
+      .slice(0, 3)
+      .map((item) => ({
         title: cleanHtml(item.title),
+        description: cleanHtml(item.description).slice(0, 160),
         link: item.link,
-        pubDate: item.pubDate,
-        description:
-          cleanDescription.length > 160
-            ? cleanDescription.slice(0, 160) + "..."
-            : cleanDescription
-      };
-    });
+        pubDate: item.pubDate
+      }));
 
-    // 브라우저에 뉴스 데이터 전달
-    return res.status(200).json(news);
+    // 제목 3개 + 요약 3개를 한 번에 번역
+    const texts = articles.flatMap((article) => [
+      article.title,
+      article.description
+    ]);
+
+    try {
+      const translated = await translateTexts(texts);
+
+      articles.forEach((article, index) => {
+        article.title = translated[index * 2];
+        article.description = translated[index * 2 + 1];
+      });
+    } catch (error) {
+      // 번역에 실패해도 영문 뉴스는 표시
+      console.error("번역 실패:", error.message);
+    }
+
+    // 동일 뉴스의 반복 번역 요청을 줄이기 위한 캐시
+    res.setHeader(
+      "Cache-Control",
+      "public, s-maxage=3600, stale-while-revalidate=86400"
+    );
+
+    return res.status(200).json(articles);
 
   } catch (error) {
-    console.error("RSS 수집 오류:", error);
+    console.error("뉴스 수집 실패:", error.message);
 
     return res.status(500).json({
-      error: "NME RSS를 가져오지 못했습니다."
+      error: "뉴스를 가져오지 못했습니다."
     });
   }
 };
