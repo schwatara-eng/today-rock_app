@@ -161,14 +161,118 @@ function useSeoulWeather() {
     });
 }
 
-function scoreSong(song) {
-  let score = 0;
-  if (song.moods.includes(selectedMood)) score += 4;
-  if (song.weathers.includes(currentWeather)) score += 2;
-  if (selectedMood === "tired" && song.energy >= 4) score += 1;
-  if (selectedMood === "calm" && song.energy <= 3) score += 1;
-  if (selectedMood === "focused" && song.energy >= 2 && song.energy <= 4) score += 1;
-  return score + Math.random() * 0.4;
+// 최근 추천한 30곡 기억하기
+const HISTORY_KEY = "todayRockRecentSongs";
+const HISTORY_LIMIT = 30;
+
+function songKey(song) {
+  return `${song.artist.trim().toLowerCase()}|${song.title.trim().toLowerCase()}`;
+}
+
+function getRecentSongs() {
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveRecentSongs(picked) {
+  const recent = getRecentSongs();
+
+  picked.forEach(song => {
+    const key = songKey(song);
+    const index = recent.indexOf(key);
+
+    if (index !== -1) recent.splice(index, 1);
+    recent.push(key);
+  });
+
+  localStorage.setItem(
+    HISTORY_KEY,
+    JSON.stringify(recent.slice(-HISTORY_LIMIT))
+  );
+}
+
+// 기분과 날씨를 모두 만족하는 곡을 우선 추천
+function recommendSongs() {
+  const recent = new Set(getRecentSongs());
+
+  // 기분을 선택하지 않았다면 전체 곡에서 추천
+  if (!selectedMood) {
+    const fresh = songs.filter(song => !recent.has(songKey(song)));
+    const picked = pickRandomSongs(
+      fresh.length >= 3 ? fresh : songs,
+      3
+    );
+    saveRecentSongs(picked);
+    return picked;
+  }
+
+  // 1순위: 기분 + 날씨 모두 일치
+  const exactMatches = songs.filter(song =>
+    song.moods.includes(selectedMood) &&
+    song.weathers.includes(currentWeather)
+  );
+
+  // 2순위: 기분만 일치
+  const moodMatches = songs.filter(song =>
+    song.moods.includes(selectedMood)
+  );
+
+  // 중복 없이 후보를 순서대로 구성
+  const candidates = [
+    ...exactMatches,
+    ...moodMatches.filter(song => !exactMatches.includes(song))
+  ];
+
+  // 최근 추천곡 제외
+  const freshCandidates = candidates.filter(
+    song => !recent.has(songKey(song))
+  );
+
+  // 기분 + 날씨 일치 후보를 우선 무작위 추출
+  const freshExact = freshCandidates.filter(song =>
+    exactMatches.includes(song)
+  );
+
+  let picked = pickRandomSongs(freshExact, 3);
+
+  // 3곡이 부족하면 기분만 일치하는 곡으로 보충
+  if (picked.length < 3) {
+    const remaining = freshCandidates.filter(
+      song => !picked.includes(song)
+    );
+
+    picked.push(
+      ...pickRandomSongs(remaining, 3 - picked.length)
+    );
+  }
+
+  // 최근 추천곡 제외로 3곡이 안 되면 이전 곡도 허용
+  if (picked.length < 3) {
+    const remaining = candidates.filter(
+      song => !picked.includes(song)
+    );
+
+    picked.push(
+      ...pickRandomSongs(remaining, 3 - picked.length)
+    );
+  }
+
+  // 기분에 해당하는 곡 자체가 부족할 때 최종 보충
+  if (picked.length < 3) {
+    const remaining = songs.filter(
+      song => !picked.includes(song)
+    );
+
+    picked.push(
+      ...pickRandomSongs(remaining, 3 - picked.length)
+    );
+  }
+
+  saveRecentSongs(picked);
+  return picked;
 }
 
 function pickRandomSongs(songList, count) {
@@ -185,9 +289,7 @@ function pickRandomSongs(songList, count) {
 function showRecommendations() {
   if (!songsLoaded || songs.length === 0) return;
 
-  const picked = selectedMood
-    ? [...songs].sort((a, b) => scoreSong(b) - scoreSong(a)).slice(0, 3)
-    : pickRandomSongs(songs, 3);
+  const picked = recommendSongs();
   const list = document.querySelector("#song-list");
   list.innerHTML = "";
 
@@ -250,7 +352,7 @@ async function loadNews() {
 
   try {
     // 우리가 만든 Node.js API에 GET 요청을 보낸다.
-const response = await fetch("/api/news");
+    const response = await fetch("/api/news");
 
     // 서버에서 오류 응답이 왔다면 catch로 이동한다.
     if (!response.ok) {
@@ -301,11 +403,10 @@ const response = await fetch("/api/news");
               </a>
             </h3>
 
-            ${
-              index === 0
-                ? `<p>${article.description}</p>`
-                : ""
-            }
+            ${index === 0
+          ? `<p>${article.description}</p>`
+          : ""
+        }
 
             <a
               class="news-link"
