@@ -1052,3 +1052,317 @@ footer {
   letter-spacing: 0.16em;
 }
 
+
+/* ARTIST OF THE DAY — full-width editorial feature */
+main > .artist-feature {
+  margin: 0 0 100px;
+  padding: 70px 0 0;
+  border-top: 1px solid var(--paper);
+}
+main > .artist-feature h2 {
+  margin-bottom: 30px;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  white-space: normal;
+}
+main > .artist-feature .artist-feature-header {
+  margin: 0 0 34px;
+}
+main > .artist-feature .artist-feature-header h3 {
+  font-size: clamp(2.4rem, 5.5vw, 5.5rem);
+}
+main > .artist-feature .artist-feature-lead {
+  max-width: 720px;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+main > .artist-feature .artist-feature-photo {
+  float: left;
+  width: min(43%, 490px);
+  margin: 0 5% 24px 0;
+}
+main > .artist-feature .artist-feature-photo img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+main > .artist-feature .artist-copy {
+  font-size: 1rem;
+  line-height: 1.95;
+  color: var(--paper);
+}
+main > .artist-feature .artist-feature-subtitle {
+  font-size: 1.4rem;
+  margin-top: 36px;
+}
+main > .artist-feature .artist-feature-history {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  font-size: .95rem;
+}
+main > .artist-feature .artist-feature-history li p {
+  font-size: .9rem;
+  line-height: 1.8;
+}
+main > .artist-feature .artist-feature-editor {
+  clear: both;
+  margin-top: 55px;
+  padding: 28px 34px;
+}
+main > .artist-feature .artist-feature-editor p:last-child {
+  max-width: 850px;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+main > .artist-feature .artist-feature-tracks {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+main > .artist-feature .artist-feature-tracks a {
+  min-height: 78px;
+}
+@media (max-width: 760px) {
+  main > .artist-feature {
+    margin-bottom: 60px;
+    padding-top: 48px;
+  }
+  main > .artist-feature .artist-feature-photo {
+    float: none;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 0 28px;
+  }
+  main > .artist-feature .artist-feature-history {
+    grid-template-columns: 1fr;
+  }
+  main > .artist-feature .artist-feature-tracks {
+    grid-template-columns: 1fr;
+  }
+  main > .artist-feature .artist-feature-editor {
+    padding: 22px;
+  }
+}
+
+/* 2026-10-08: left photo + three square tracks / right article + comment */
+main > .artist-feature .artist-editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 43%) minmax(0, 1fr);
+  gap: 5%;
+  align-items: start;
+}
+main > .artist-feature .artist-editorial-left,
+main > .artist-feature .artist-editorial-right { min-width: 0; }
+main > .artist-feature .artist-feature-photo {
+  float: none;
+  width: 100%;
+  margin: 0 0 24px;
+}
+main > .artist-feature .artist-feature-tracks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+main > .artist-feature .artist-feature-tracks li { min-width: 0; }
+main > .artist-feature .artist-feature-tracks a {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+main > .artist-feature .artist-feature-tracks a::before { flex: none; }
+main > .artist-feature .artist-feature-tracks a > span:first-child { flex: 1; width: 100%; }
+main > .artist-feature .artist-feature-tracks a > span:last-child { align-self: flex-end; }
+main > .artist-feature .artist-feature-tracks strong { font-size: clamp(11px, 1.1vw, 15px); line-height: 1.35; overflow-wrap: anywhere; }
+main > .artist-feature .artist-feature-tracks small { font-size: 11px; }
+main > .artist-feature .artist-feature-editor {
+  clear: none;
+  margin: 34px 0 0;
+  padding: 24px 26px;
+}
+main > .artist-feature .artist-feature-history { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) {
+  main > .artist-feature .artist-editorial-grid { grid-template-columns: 1fr; gap: 36px; }
+  main > .artist-feature .artist-feature-photo { max-width: none; }
+  main > .artist-feature .artist-feature-history { grid-template-columns: 1fr; }
+  main > .artist-feature .artist-feature-tracks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main > .artist-feature .artist-feature-tracks a { padding: 8px; }
+  main > .artist-feature .artist-feature-tracks strong { font-size: 11px; }
+}
+
+/* Compact bottom row: editor comment left, three tracks right */
+main > .artist-feature .artist-feature-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 43%) minmax(0, 1fr);
+  gap: 5%;
+  align-items: start;
+  margin-top: 28px;
+}
+main > .artist-feature .artist-feature-bottom .artist-feature-editor {
+  margin: 0;
+  padding: 20px 24px;
+}
+main > .artist-feature .artist-feature-bottom .artist-feature-editor p:last-child {
+  font-size: .88rem;
+  line-height: 1.8;
+}
+main > .artist-feature .artist-feature-track-group { min-width: 0; }
+main > .artist-feature .artist-feature-track-group .artist-feature-subtitle {
+  margin: 0 0 14px;
+}
+main > .artist-feature .artist-feature-track-group .artist-feature-tracks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+main > .artist-feature .artist-feature-track-group .artist-feature-tracks a {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  padding: 12px;
+}
+@media (max-width: 760px) {
+  main > .artist-feature .artist-feature-bottom {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* Compact artist feature: photo left, all text and tracks right */
+main > .artist-feature { padding-top: 42px; margin-bottom: 50px; }
+main > .artist-feature > h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); margin: 6px 0 22px; }
+main > .artist-feature .artist-editorial-grid { display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 1fr); gap: 4%; align-items: stretch; }
+main > .artist-feature .artist-editorial-left { display: flex; min-height: 0; }
+main > .artist-feature .artist-feature-photo { margin: 0; width: 100%; height: 100%; }
+main > .artist-feature .artist-feature-photo img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center; }
+main > .artist-feature .artist-editorial-right { display: flex; flex-direction: column; gap: 12px; }
+main > .artist-feature .artist-feature-header { margin: 0; }
+main > .artist-feature .artist-feature-header h3 { font-size: clamp(1.55rem, 2.8vw, 2.5rem); margin: 4px 0 6px; }
+main > .artist-feature .artist-feature-lead { font-size: .92rem; line-height: 1.5; margin: 0; }
+main > .artist-feature .artist-copy { font-size: .78rem; line-height: 1.65; margin: 0; color: var(--gray); }
+main > .artist-feature .artist-feature-subtitle { font-size: 1rem; margin: 4px 0 7px; }
+main > .artist-feature .artist-feature-history { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 16px; }
+main > .artist-feature .artist-feature-history li { padding: 7px 0; }
+main > .artist-feature .artist-feature-history strong { font-size: .75rem; line-height: 1.35; }
+main > .artist-feature .artist-feature-history li p { font-size: .71rem; line-height: 1.45; margin-top: 3px; }
+main > .artist-feature .artist-feature-editor { margin: 0; padding: 14px 18px; }
+main > .artist-feature .artist-feature-editor > .section-label { margin: 0 0 9px; padding-bottom: 8px; }
+main > .artist-feature .artist-feature-editor p:last-child { font-size: .73rem; line-height: 1.55; }
+main > .artist-feature .artist-feature-track-group .artist-feature-subtitle { margin: 0 0 8px; }
+main > .artist-feature .artist-feature-tracks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+main > .artist-feature .artist-feature-tracks a { aspect-ratio: auto; min-height: 70px; padding: 9px; gap: 3px; }
+main > .artist-feature .artist-feature-tracks strong { font-size: .72rem; }
+main > .artist-feature .artist-feature-tracks small { font-size: .65rem; }
+main > .artist-feature .artist-feature-sources { margin-top: 14px; }
+@media (max-width: 760px) {
+  main > .artist-feature .artist-editorial-grid { grid-template-columns: 1fr; gap: 20px; }
+  main > .artist-feature .artist-feature-photo { height: auto; }
+  main > .artist-feature .artist-feature-photo img { aspect-ratio: 4 / 3; height: auto; }
+  main > .artist-feature .artist-feature-history { grid-template-columns: 1fr; }
+}
+
+/* Larger track labels; allow multi-line song titles */
+main > .artist-feature .artist-feature-tracks strong {
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+main > .artist-feature .artist-feature-tracks small {
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.4;
+  white-space: normal;
+}
+main > .artist-feature .artist-feature-tracks a {
+  min-height: 95px;
+  height: auto;
+}
+@media (max-width: 760px) {
+  main > .artist-feature .artist-feature-tracks strong { font-size: 13px; }
+  main > .artist-feature .artist-feature-tracks small { font-size: 11px; }
+}
+
+/* 2026-10-08: compact track cards and matching photo frame */
+@media (min-width: 761px) {
+  main > .artist-feature .artist-feature-tracks a {
+    min-height: 68px;
+    padding: 7px 9px;
+    gap: 2px;
+  }
+  main > .artist-feature .artist-feature-tracks strong {
+    font-size: clamp(14px, 1.25vw, 17px);
+    line-height: 1.2;
+  }
+  main > .artist-feature .artist-feature-tracks small {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+  main > .artist-feature .artist-editorial-left {
+    position: relative;
+    min-height: 0;
+  }
+  main > .artist-feature .artist-feature-photo {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+  main > .artist-feature .artist-feature-photo img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 2026-10-08 correction: override the earlier square-card rule explicitly. */
+@media (min-width: 761px) {
+  main > .artist-feature .artist-editorial-right {
+    gap: 8px;
+  }
+  main > .artist-feature .artist-feature-track-group .artist-feature-subtitle {
+    margin: 0 0 5px;
+  }
+  main > .artist-feature .artist-feature-track-group .artist-feature-tracks {
+    gap: 7px;
+    align-items: stretch;
+  }
+  main > .artist-feature .artist-feature-track-group .artist-feature-tracks a {
+    aspect-ratio: auto;
+    min-height: 0;
+    height: 76px;
+    padding: 6px 8px;
+    gap: 4px;
+    align-items: center;
+    overflow: hidden;
+  }
+  main > .artist-feature .artist-feature-track-group .artist-feature-tracks strong {
+    font-size: 14px;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+  }
+  main > .artist-feature .artist-feature-track-group .artist-feature-tracks small {
+    font-size: 11px;
+    line-height: 1.2;
+    margin-top: 3px;
+  }
+  main > .artist-feature .artist-editorial-grid {
+    align-items: stretch;
+  }
+  main > .artist-feature .artist-editorial-left {
+    position: relative;
+    min-height: 0;
+  }
+  main > .artist-feature .artist-editorial-left .artist-feature-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  main > .artist-feature .artist-editorial-left .artist-feature-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+}
