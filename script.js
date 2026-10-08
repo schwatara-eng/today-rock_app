@@ -250,7 +250,7 @@ async function loadNews() {
 
   try {
     // 우리가 만든 Node.js API에 GET 요청을 보낸다.
-    const response = await fetch("http://localhost:3000/api/news");
+const response = await fetch("/api/news");
 
     // 서버에서 오류 응답이 왔다면 catch로 이동한다.
     if (!response.ok) {
