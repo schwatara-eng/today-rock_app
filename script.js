@@ -331,7 +331,7 @@ function showRecommendations() {
     </div>
   `;
   resultSection.hidden = false;
-  resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+ // resultSection.scrollIntoView({ behavior: "smooth", block: "start" }); - 자동스크롤 제거
 }
 
 // --------------------------------------------------
