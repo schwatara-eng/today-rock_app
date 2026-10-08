@@ -5699,5 +5699,1905 @@
     "tone": "Korean Pop Rock 특유의 강한 추진력과 폭발적인 후렴이 살아 있는 분위기",
     "reason": "강한 리듬과 후렴이 가라앉은 에너지를 단숨에 끌어올립니다.",
     "lyricsUrl": "https://search.naver.com/search.naver?query=LUCY%20%EA%B0%9C%ED%99%94%20%EA%B0%80%EC%82%AC"
+  },
+  {
+    "title": "Across the Universe",
+    "artist": "The Beatles",
+    "year": 1969,
+    "genre": "Psychedelic Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "흘러가는 생각과 마음",
+    "tone": "몽환적인 어쿠스틱과 부드러운 보컬",
+    "reason": "복잡한 생각을 잠시 내려놓고 싶을 때 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Beatles%20Across%20the%20Universe"
+  },
+  {
+    "title": "Pale Blue Eyes",
+    "artist": "The Velvet Underground",
+    "year": 1969,
+    "genre": "Art Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "사랑의 기억과 거리감",
+    "tone": "나지막한 목소리와 느린 기타",
+    "reason": "조용한 밤에 감정을 정리하기 좋은 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Velvet%20Underground%20Pale%20Blue%20Eyes"
+  },
+  {
+    "title": "River Man",
+    "artist": "Nick Drake",
+    "year": 1969,
+    "genre": "Folk Rock",
+    "moods": [
+      "calm",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "시간과 고독",
+    "tone": "현악과 어쿠스틱 기타의 깊은 울림",
+    "reason": "서두르지 않는 리듬이 마음을 가라앉혀 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Nick%20Drake%20River%20Man"
+  },
+  {
+    "title": "Time of the Season",
+    "artist": "The Zombies",
+    "year": 1968,
+    "genre": "Psychedelic Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "계절과 호기심",
+    "tone": "절제된 리듬과 몽환적인 화음",
+    "reason": "선선한 공기 속에서 천천히 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Zombies%20Time%20of%20the%20Season"
+  },
+  {
+    "title": "Turn! Turn! Turn!",
+    "artist": "The Byrds",
+    "year": 1965,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "변화와 순환",
+    "tone": "맑은 기타와 차분한 합창",
+    "reason": "마음이 지칠 때 변화의 시간을 떠올리게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Byrds%20Turn%21%20Turn%21%20Turn%21"
+  },
+  {
+    "title": "In My Room",
+    "artist": "The Beach Boys",
+    "year": 1963,
+    "genre": "Baroque Pop",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "혼자만의 안식처",
+    "tone": "포근한 화음과 단정한 멜로디",
+    "reason": "외부의 소음을 피하고 싶은 날 추천해요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Beach%20Boys%20In%20My%20Room"
+  },
+  {
+    "title": "Waterloo Sunset",
+    "artist": "The Kinks",
+    "year": 1967,
+    "genre": "Soft Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "cloudy",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "도시의 저녁과 관조",
+    "tone": "잔잔한 기타와 따뜻한 보컬",
+    "reason": "창밖 풍경을 바라보며 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Kinks%20Waterloo%20Sunset"
+  },
+  {
+    "title": "A Whiter Shade of Pale",
+    "artist": "Procol Harum",
+    "year": 1967,
+    "genre": "Art Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "흐릿한 기억과 상실",
+    "tone": "오르간이 이끄는 서정적인 흐름",
+    "reason": "우울한 날의 긴 여운과 잘 맞아요.",
+    "lyricsUrl": "https://genius.com/search?q=Procol%20Harum%20A%20Whiter%20Shade%20of%20Pale"
+  },
+  {
+    "title": "It's Too Late",
+    "artist": "Carole King",
+    "year": 1971,
+    "genre": "Soft Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "끝난 관계를 받아들이기",
+    "tone": "담담한 피아노와 절제된 리듬",
+    "reason": "감정을 과장하지 않고 이별을 바라보게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Carole%20King%20It%27s%20Too%20Late"
+  },
+  {
+    "title": "Heart of Gold",
+    "artist": "Neil Young",
+    "year": 1972,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "진심을 찾아가는 길",
+    "tone": "소박한 기타와 하모니카",
+    "reason": "힘을 빼고 하루를 시작하고 싶을 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Neil%20Young%20Heart%20of%20Gold"
+  },
+  {
+    "title": "A Horse with No Name",
+    "artist": "America",
+    "year": 1971,
+    "genre": "Folk Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "낯선 풍경과 이동",
+    "tone": "건조한 어쿠스틱 반복 리듬",
+    "reason": "생각을 정리하며 걷기에 좋은 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=America%20A%20Horse%20with%20No%20Name"
+  },
+  {
+    "title": "These Days",
+    "artist": "Jackson Browne",
+    "year": 1973,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "지난 선택과 회고",
+    "tone": "느린 기타와 담백한 목소리",
+    "reason": "지나간 시간을 조용히 돌아보게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Jackson%20Browne%20These%20Days"
+  },
+  {
+    "title": "Echoes",
+    "artist": "Pink Floyd",
+    "year": 1971,
+    "genre": "Progressive Rock",
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "거리와 연결",
+    "tone": "길게 펼쳐지는 실험적 사운드",
+    "reason": "집중할 시간을 길게 확보하고 싶을 때 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Pink%20Floyd%20Echoes"
+  },
+  {
+    "title": "Sound and Vision",
+    "artist": "David Bowie",
+    "year": 1977,
+    "genre": "Art Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "고독 속의 감각",
+    "tone": "절제된 신시사이저와 경쾌한 기타",
+    "reason": "멍하니 머물다 다시 움직이기 좋은 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=David%20Bowie%20Sound%20and%20Vision"
+  },
+  {
+    "title": "Sara",
+    "artist": "Fleetwood Mac",
+    "year": 1979,
+    "genre": "Soft Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "그리움과 애틋함",
+    "tone": "부드럽게 흐르는 건반과 보컬",
+    "reason": "기운 없는 저녁을 포근하게 채워 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Fleetwood%20Mac%20Sara"
+  },
+  {
+    "title": "The Logical Song",
+    "artist": "Supertramp",
+    "year": 1979,
+    "genre": "Progressive Rock",
+    "moods": [
+      "focused",
+      "blue"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 3,
+    "theme": "성장과 질문",
+    "tone": "선명한 건반과 변화하는 리듬",
+    "reason": "생각이 많아지는 오후에 잘 맞아요.",
+    "lyricsUrl": "https://genius.com/search?q=Supertramp%20The%20Logical%20Song"
+  },
+  {
+    "title": "Marquee Moon",
+    "artist": "Television",
+    "year": 1977,
+    "genre": "Art Punk",
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 3,
+    "theme": "도시의 긴장과 자유",
+    "tone": "두 기타가 교차하는 긴 연주",
+    "reason": "작업에 몰입하며 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Television%20Marquee%20Moon"
+  },
+  {
+    "title": "Outdoor Miner",
+    "artist": "Wire",
+    "year": 1978,
+    "genre": "Post-Punk",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "일상의 작은 장면",
+    "tone": "짧고 맑은 기타 팝",
+    "reason": "짧은 환기가 필요한 순간에 추천해요.",
+    "lyricsUrl": "https://genius.com/search?q=Wire%20Outdoor%20Miner"
+  },
+  {
+    "title": "That's Entertainment",
+    "artist": "The Jam",
+    "year": 1980,
+    "genre": "New Wave",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "평범한 도시의 삶",
+    "tone": "담담한 어쿠스틱과 날카로운 시선",
+    "reason": "흐린 거리 풍경과 자연스럽게 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Jam%20That%27s%20Entertainment"
+  },
+  {
+    "title": "Atmosphere",
+    "artist": "Joy Division",
+    "year": 1980,
+    "genre": "Post-Punk",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "고립과 연대",
+    "tone": "느린 드럼과 어두운 공간감",
+    "reason": "마음을 조용히 들여다보고 싶을 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Joy%20Division%20Atmosphere"
+  },
+  {
+    "title": "The Killing Moon",
+    "artist": "Echo & the Bunnymen",
+    "year": 1984,
+    "genre": "Post-Punk",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "운명과 끌림",
+    "tone": "신비로운 기타와 묵직한 저음",
+    "reason": "차가운 밤공기에 어울리는 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=Echo%20%26%20the%20Bunnymen%20The%20Killing%20Moon"
+  },
+  {
+    "title": "Heaven or Las Vegas",
+    "artist": "Cocteau Twins",
+    "year": 1990,
+    "genre": "Dream Pop",
+    "moods": [
+      "calm",
+      "excited"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 3,
+    "theme": "황홀한 감각",
+    "tone": "반짝이는 기타와 겹겹의 보컬",
+    "reason": "눈 내리는 거리의 비현실적인 느낌을 살려 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Cocteau%20Twins%20Heaven%20or%20Las%20Vegas"
+  },
+  {
+    "title": "Under the Milky Way",
+    "artist": "The Church",
+    "year": 1988,
+    "genre": "Alternative Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "밤과 미지의 감정",
+    "tone": "공간감 있는 기타와 낮은 보컬",
+    "reason": "조용한 밤길에 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Church%20Under%20the%20Milky%20Way"
+  },
+  {
+    "title": "Fall on Me",
+    "artist": "R.E.M.",
+    "year": 1986,
+    "genre": "Alternative Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "무게를 나누는 마음",
+    "tone": "부드러운 기타와 화음",
+    "reason": "힘든 하루를 조금 가볍게 만드는 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=R.E.M.%20Fall%20on%20Me"
+  },
+  {
+    "title": "Unsatisfied",
+    "artist": "The Replacements",
+    "year": 1984,
+    "genre": "Alternative Rock",
+    "moods": [
+      "frustrated",
+      "blue"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 3,
+    "theme": "채워지지 않는 마음",
+    "tone": "거칠지만 애틋한 보컬",
+    "reason": "답답한 감정을 숨기지 않고 꺼내게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Replacements%20Unsatisfied"
+  },
+  {
+    "title": "Just Like Honey",
+    "artist": "The Jesus and Mary Chain",
+    "year": 1985,
+    "genre": "Alternative Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "달콤하고 불안한 사랑",
+    "tone": "노이즈 기타와 느린 박자",
+    "reason": "쓸쓸한 날의 몽롱한 분위기에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Jesus%20and%20Mary%20Chain%20Just%20Like%20Honey"
+  },
+  {
+    "title": "The Downtown Lights",
+    "artist": "The Blue Nile",
+    "year": 1989,
+    "genre": "Art Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "도시의 밤과 그리움",
+    "tone": "넓은 신시사이저와 느린 고조",
+    "reason": "늦은 귀갓길의 정서를 깊게 만들어 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Blue%20Nile%20The%20Downtown%20Lights"
+  },
+  {
+    "title": "Streets of Your Town",
+    "artist": "The Go-Betweens",
+    "year": 1988,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "익숙한 거리의 이면",
+    "tone": "산뜻한 기타와 씁쓸한 가사",
+    "reason": "평범한 산책에 작은 여운을 남겨요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Go-Betweens%20Streets%20of%20Your%20Town"
+  },
+  {
+    "title": "Strange",
+    "artist": "Galaxie 500",
+    "year": 1989,
+    "genre": "Dream Pop",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "낯선 감각과 소외",
+    "tone": "느릿한 기타와 담담한 보컬",
+    "reason": "아무 말 없이 쉬고 싶은 밤에 잘 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Galaxie%20500%20Strange"
+  },
+  {
+    "title": "Pictures of You",
+    "artist": "The Cure",
+    "year": 1989,
+    "genre": "Alternative Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "사진 속의 기억",
+    "tone": "길게 펼쳐지는 기타와 서정적인 보컬",
+    "reason": "그리움이 짙은 날에 천천히 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Cure%20Pictures%20of%20You"
+  },
+  {
+    "title": "No Ordinary Love",
+    "artist": "Sade",
+    "year": 1992,
+    "genre": "Soft Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "깊고 복잡한 사랑",
+    "tone": "느린 기타와 차분한 보컬",
+    "reason": "서늘한 밤의 감정을 가라앉혀 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Sade%20No%20Ordinary%20Love"
+  },
+  {
+    "title": "Alison",
+    "artist": "Slowdive",
+    "year": 1993,
+    "genre": "Dream Pop",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "멀어진 관계의 잔상",
+    "tone": "안개 같은 기타와 흐릿한 보컬",
+    "reason": "기운을 소모하지 않고 음악에 기대기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Slowdive%20Alison"
+  },
+  {
+    "title": "Vapour Trail",
+    "artist": "Ride",
+    "year": 1990,
+    "genre": "Alternative Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "사라지는 순간",
+    "tone": "반복되는 기타와 서정적인 현악",
+    "reason": "차가운 공기 속 산책에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Ride%20Vapour%20Trail"
+  },
+  {
+    "title": "Here's Where the Story Ends",
+    "artist": "The Sundays",
+    "year": 1990,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "지나간 이야기",
+    "tone": "투명한 기타와 부드러운 보컬",
+    "reason": "마음을 다그치지 않는 가벼운 위로가 돼요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Sundays%20Here%27s%20Where%20the%20Story%20Ends"
+  },
+  {
+    "title": "Lover, You Should've Come Over",
+    "artist": "Jeff Buckley",
+    "year": 1994,
+    "genre": "Folk Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "뒤늦은 후회와 사랑",
+    "tone": "섬세하게 고조되는 보컬",
+    "reason": "감정이 북받치는 날 충분히 머물게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Jeff%20Buckley%20Lover%2C%20You%20Should%27ve%20Come%20Over"
+  },
+  {
+    "title": "Between the Bars",
+    "artist": "Elliott Smith",
+    "year": 1997,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "도피와 위안의 양면",
+    "tone": "속삭이는 보컬과 어쿠스틱 기타",
+    "reason": "소란스러운 하루 끝에 조용히 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Elliott%20Smith%20Between%20the%20Bars"
+  },
+  {
+    "title": "Roads",
+    "artist": "Portishead",
+    "year": 1994,
+    "genre": "Alternative Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "외로움과 불안",
+    "tone": "느린 비트와 쓸쓸한 목소리",
+    "reason": "비 오는 밤의 고독한 분위기를 담아내요.",
+    "lyricsUrl": "https://genius.com/search?q=Portishead%20Roads"
+  },
+  {
+    "title": "Teardrop",
+    "artist": "Massive Attack",
+    "year": 1998,
+    "genre": "Alternative Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "감정의 파편",
+    "tone": "섬세한 비트와 몽환적인 보컬",
+    "reason": "조용히 집중할 때 방해 없이 흘러가요.",
+    "lyricsUrl": "https://genius.com/search?q=Massive%20Attack%20Teardrop"
+  },
+  {
+    "title": "Erase / Rewind",
+    "artist": "The Cardigans",
+    "year": 1998,
+    "genre": "Alternative Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "cloudy",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "선택을 되돌리고 싶은 마음",
+    "tone": "차분한 그루브와 선명한 멜로디",
+    "reason": "복잡한 생각을 리듬에 실어 보내기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Cardigans%20Erase%20/%20Rewind"
+  },
+  {
+    "title": "Talk Tonight",
+    "artist": "Oasis",
+    "year": 1995,
+    "genre": "Britpop",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "위기의 순간 만난 위로",
+    "tone": "담백한 어쿠스틱 기타",
+    "reason": "혼자 있는 저녁에 조용히 힘을 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Oasis%20Talk%20Tonight"
+  },
+  {
+    "title": "This Is a Low",
+    "artist": "Blur",
+    "year": 1994,
+    "genre": "Britpop",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "멀리 떠나고 싶은 마음",
+    "tone": "느린 기타와 서정적인 보컬",
+    "reason": "흐린 날 창가에 머물기 좋은 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=Blur%20This%20Is%20a%20Low"
+  },
+  {
+    "title": "Something Changed",
+    "artist": "Pulp",
+    "year": 1995,
+    "genre": "Britpop",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "우연이 만든 인연",
+    "tone": "소박한 멜로디와 다정한 서사",
+    "reason": "일상의 우연을 돌아보게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Pulp%20Something%20Changed"
+  },
+  {
+    "title": "Let Down",
+    "artist": "Radiohead",
+    "year": 1997,
+    "genre": "Alternative Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "도시 생활의 무력감",
+    "tone": "겹쳐지는 기타와 점진적인 상승",
+    "reason": "지친 마음을 억지로 끌어올리지 않아요.",
+    "lyricsUrl": "https://genius.com/search?q=Radiohead%20Let%20Down"
+  },
+  {
+    "title": "The Boy with the Arab Strap",
+    "artist": "Belle and Sebastian",
+    "year": 1998,
+    "genre": "Indie Pop",
+    "moods": [
+      "calm",
+      "excited"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 3,
+    "theme": "사람들 사이의 소소한 이야기",
+    "tone": "가볍게 뛰는 피아노와 리듬",
+    "reason": "무거운 분위기를 조금 환기해 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Belle%20and%20Sebastian%20The%20Boy%20with%20the%20Arab%20Strap"
+  },
+  {
+    "title": "Carry the Zero",
+    "artist": "Built to Spill",
+    "year": 1999,
+    "genre": "Indie Rock",
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 3,
+    "theme": "생각의 반복과 관계",
+    "tone": "길게 이어지는 기타의 흐름",
+    "reason": "일에 몰입할 때 자연스럽게 이어져요.",
+    "lyricsUrl": "https://genius.com/search?q=Built%20to%20Spill%20Carry%20the%20Zero"
+  },
+  {
+    "title": "Svefn-g-englar",
+    "artist": "Sigur Rós",
+    "year": 1999,
+    "genre": "Post-Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "꿈과 부유하는 감각",
+    "tone": "느리고 넓게 번지는 사운드",
+    "reason": "잠시 모든 속도를 늦추고 싶을 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Sigur%20R%C3%B3s%20Svefn-g-englar"
+  },
+  {
+    "title": "Take Me Somewhere Nice",
+    "artist": "Mogwai",
+    "year": 2001,
+    "genre": "Post-Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "떠나고 싶은 마음",
+    "tone": "절제된 기타와 느린 고조",
+    "reason": "겨울 오후의 적막을 부드럽게 채워 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Mogwai%20Take%20Me%20Somewhere%20Nice"
+  },
+  {
+    "title": "Your Hand in Mine",
+    "artist": "Explosions in the Sky",
+    "year": 2003,
+    "genre": "Post-Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "연결과 희망",
+    "tone": "가사 없이 상승하는 기타 선율",
+    "reason": "차분하게 몰입하거나 산책하기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Explosions%20in%20the%20Sky%20Your%20Hand%20in%20Mine"
+  },
+  {
+    "title": "Transatlanticism",
+    "artist": "Death Cab for Cutie",
+    "year": 2003,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "거리와 그리움",
+    "tone": "잔잔하게 시작해 크게 번지는 연주",
+    "reason": "멀어진 사람을 떠올리는 밤에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Death%20Cab%20for%20Cutie%20Transatlanticism"
+  },
+  {
+    "title": "New Slang",
+    "artist": "The Shins",
+    "year": 2001,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "익숙한 삶에서 벗어나기",
+    "tone": "담백한 어쿠스틱과 나른한 보컬",
+    "reason": "기운이 부족한 아침에 부담 없이 들어요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Shins%20New%20Slang"
+  },
+  {
+    "title": "Chicago",
+    "artist": "Sufjan Stevens",
+    "year": 2005,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "떠남과 다시 시작",
+    "tone": "풍성한 악기와 따뜻한 합창",
+    "reason": "마음을 다잡으며 길을 나설 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Sufjan%20Stevens%20Chicago"
+  },
+  {
+    "title": "First Day of My Life",
+    "artist": "Bright Eyes",
+    "year": 2005,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "새로운 사랑과 출발",
+    "tone": "소박한 기타와 가까운 목소리",
+    "reason": "조용한 희망이 필요한 순간에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Bright%20Eyes%20First%20Day%20of%20My%20Life"
+  },
+  {
+    "title": "Naked as We Came",
+    "artist": "Iron & Wine",
+    "year": 2004,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "함께하는 시간의 유한함",
+    "tone": "낮은 목소리와 부드러운 기타",
+    "reason": "지친 날에 온기를 남기는 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=Iron%20%26%20Wine%20Naked%20as%20We%20Came"
+  },
+  {
+    "title": "Fake Empire",
+    "artist": "The National",
+    "year": 2007,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "focused"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "무감각한 일상과 불안",
+    "tone": "반복되는 피아노와 낮은 보컬",
+    "reason": "생각이 복잡한 흐린 오후에 잘 맞아요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20National%20Fake%20Empire"
+  },
+  {
+    "title": "Skinny Love",
+    "artist": "Bon Iver",
+    "year": 2007,
+    "genre": "Folk Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "위태로운 관계",
+    "tone": "거친 어쿠스틱과 절박한 보컬",
+    "reason": "감정을 조용히 털어놓고 싶은 날 추천해요.",
+    "lyricsUrl": "https://genius.com/search?q=Bon%20Iver%20Skinny%20Love"
+  },
+  {
+    "title": "White Winter Hymnal",
+    "artist": "Fleet Foxes",
+    "year": 2008,
+    "genre": "Folk Rock",
+    "moods": [
+      "calm",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "겨울의 기억",
+    "tone": "겹겹이 쌓인 화음과 경쾌한 박자",
+    "reason": "눈 내리는 날의 풍경과 잘 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Fleet%20Foxes%20White%20Winter%20Hymnal"
+  },
+  {
+    "title": "Two Weeks",
+    "artist": "Grizzly Bear",
+    "year": 2009,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "관계 속의 기다림",
+    "tone": "정교한 화음과 단정한 리듬",
+    "reason": "집중하면서도 가볍게 들을 수 있어요.",
+    "lyricsUrl": "https://genius.com/search?q=Grizzly%20Bear%20Two%20Weeks"
+  },
+  {
+    "title": "Our Way to Fall",
+    "artist": "Yo La Tengo",
+    "year": 2000,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "사랑의 시작을 기억하기",
+    "tone": "속삭이는 보컬과 따뜻한 건반",
+    "reason": "하루를 마무리할 때 부담이 적어요.",
+    "lyricsUrl": "https://genius.com/search?q=Yo%20La%20Tengo%20Our%20Way%20to%20Fall"
+  },
+  {
+    "title": "Jesus, Etc.",
+    "artist": "Wilco",
+    "year": 2002,
+    "genre": "Alternative Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "불안 속의 위로",
+    "tone": "현악과 담담한 멜로디",
+    "reason": "마음이 흔들리는 날 조용히 기대기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Wilco%20Jesus%2C%20Etc."
+  },
+  {
+    "title": "Crystalised",
+    "artist": "The xx",
+    "year": 2009,
+    "genre": "Indie Pop",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "서로 다른 마음의 거리",
+    "tone": "여백 많은 기타와 절제된 비트",
+    "reason": "생각을 정리할 때 공간을 남겨 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20xx%20Crystalised"
+  },
+  {
+    "title": "Myth",
+    "artist": "Beach House",
+    "year": 2012,
+    "genre": "Dream Pop",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "환상과 상실",
+    "tone": "반복되는 기타와 흐릿한 보컬",
+    "reason": "차분하게 감정에 잠기기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Beach%20House%20Myth"
+  },
+  {
+    "title": "Youth",
+    "artist": "Daughter",
+    "year": 2013,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "상처와 성장",
+    "tone": "섬세한 기타와 절박한 목소리",
+    "reason": "마음이 지친 날 감정을 대신 말해 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Daughter%20Youth"
+  },
+  {
+    "title": "Strong",
+    "artist": "London Grammar",
+    "year": 2013,
+    "genre": "Indie Pop",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "취약함과 버팀",
+    "tone": "낮은 피아노와 깊은 보컬",
+    "reason": "느린 호흡으로 하루를 정리하게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=London%20Grammar%20Strong"
+  },
+  {
+    "title": "Love Is to Die",
+    "artist": "Warpaint",
+    "year": 2014,
+    "genre": "Indie Rock",
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "사랑과 불확실성",
+    "tone": "최면적인 베이스와 반복 리듬",
+    "reason": "긴 작업에 집중하기 좋은 흐름이에요.",
+    "lyricsUrl": "https://genius.com/search?q=Warpaint%20Love%20Is%20to%20Die"
+  },
+  {
+    "title": "Archie, Marry Me",
+    "artist": "Alvvays",
+    "year": 2014,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "excited"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 3,
+    "theme": "현실과 낭만 사이의 사랑",
+    "tone": "밝은 기타와 아련한 보컬",
+    "reason": "차가운 날에도 산뜻한 기분을 더해 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Alvvays%20Archie%2C%20Marry%20Me"
+  },
+  {
+    "title": "Talking Backwards",
+    "artist": "Real Estate",
+    "year": 2014,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "엇갈리는 대화",
+    "tone": "맑은 기타와 일정한 리듬",
+    "reason": "가볍게 걷거나 정리할 때 잘 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Real%20Estate%20Talking%20Backwards"
+  },
+  {
+    "title": "Chamber of Reflection",
+    "artist": "Mac DeMarco",
+    "year": 2014,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "혼자 있는 시간",
+    "tone": "느슨한 신시사이저와 낮은 보컬",
+    "reason": "아무것도 서두르지 않는 밤에 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Mac%20DeMarco%20Chamber%20of%20Reflection"
+  },
+  {
+    "title": "Sister",
+    "artist": "Angel Olsen",
+    "year": 2016,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "자기 발견과 관계",
+    "tone": "서정적으로 확장되는 기타",
+    "reason": "감정을 천천히 마주하는 시간에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Angel%20Olsen%20Sister"
+  },
+  {
+    "title": "Paul",
+    "artist": "Big Thief",
+    "year": 2016,
+    "genre": "Indie Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "서툰 사랑과 후회",
+    "tone": "가까운 목소리와 담백한 기타",
+    "reason": "혼자 있는 저녁에 잔잔한 여운을 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Big%20Thief%20Paul"
+  },
+  {
+    "title": "Don't Know How to Keep Loving You",
+    "artist": "Julia Jacklin",
+    "year": 2019,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "관계의 소진",
+    "tone": "느린 기타와 절제된 고조",
+    "reason": "마음이 지쳤을 때 과장 없이 다가와요.",
+    "lyricsUrl": "https://genius.com/search?q=Julia%20Jacklin%20Don%27t%20Know%20How%20to%20Keep%20Loving%20You"
+  },
+  {
+    "title": "Pristine",
+    "artist": "Snail Mail",
+    "year": 2018,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "첫사랑과 불안",
+    "tone": "맑은 기타와 직선적인 보컬",
+    "reason": "차가운 날의 아련한 감정에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Snail%20Mail%20Pristine"
+  },
+  {
+    "title": "Show Me How",
+    "artist": "Men I Trust",
+    "year": 2018,
+    "genre": "Dream Pop",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "친밀함을 바라는 마음",
+    "tone": "부드러운 베이스와 나른한 보컬",
+    "reason": "조용한 휴식 시간에 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Men%20I%20Trust%20Show%20Me%20How"
+  },
+  {
+    "title": "Friday Morning",
+    "artist": "Khruangbin",
+    "year": 2018,
+    "genre": "Psychedelic Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "느린 아침의 여유",
+    "tone": "말없이 흐르는 기타와 베이스",
+    "reason": "아침의 속도를 늦추고 싶을 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Khruangbin%20Friday%20Morning"
+  },
+  {
+    "title": "Apocalypse",
+    "artist": "Cigarettes After Sex",
+    "year": 2017,
+    "genre": "Dream Pop",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "끝을 예감하는 사랑",
+    "tone": "낮은 목소리와 느린 기타",
+    "reason": "비 오는 밤에 잔잔하게 스며들어요.",
+    "lyricsUrl": "https://genius.com/search?q=Cigarettes%20After%20Sex%20Apocalypse"
+  },
+  {
+    "title": "Two Slow Dancers",
+    "artist": "Mitski",
+    "year": 2018,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "돌아갈 수 없는 시절",
+    "tone": "느린 신시사이저와 애틋한 보컬",
+    "reason": "오래된 기억을 꺼내는 순간에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Mitski%20Two%20Slow%20Dancers"
+  },
+  {
+    "title": "anything",
+    "artist": "Adrianne Lenker",
+    "year": 2020,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "사소한 일상의 친밀함",
+    "tone": "거친 숨결이 느껴지는 어쿠스틱",
+    "reason": "지친 날 가장 작은 소리에 집중하게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Adrianne%20Lenker%20anything"
+  },
+  {
+    "title": "Garden Song",
+    "artist": "Phoebe Bridgers",
+    "year": 2020,
+    "genre": "Indie Rock",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "성장과 불안한 꿈",
+    "tone": "낮게 가라앉은 목소리와 몽환적 기타",
+    "reason": "조용한 겨울밤에 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Phoebe%20Bridgers%20Garden%20Song"
+  },
+  {
+    "title": "exile",
+    "artist": "Taylor Swift",
+    "year": 2020,
+    "genre": "Folk Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "서로 다른 이별의 기억",
+    "tone": "낮은 남성 보컬과 서정적인 화음",
+    "reason": "감정을 가라앉히며 듣기 좋은 듀엣이에요.",
+    "lyricsUrl": "https://genius.com/search?q=Taylor%20Swift%20exile"
+  },
+  {
+    "title": "I Don't Live Here Anymore",
+    "artist": "The War on Drugs",
+    "year": 2021,
+    "genre": "Heartland Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 3,
+    "theme": "변화와 지나간 시간",
+    "tone": "넓게 펼쳐지는 기타와 추진력 있는 드럼",
+    "reason": "마음을 환기하며 걷고 싶을 때 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20War%20on%20Drugs%20I%20Don%27t%20Live%20Here%20Anymore"
+  },
+  {
+    "title": "Paprika",
+    "artist": "Japanese Breakfast",
+    "year": 2021,
+    "genre": "Indie Pop",
+    "moods": [
+      "excited",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 3,
+    "theme": "새로운 가능성과 환희",
+    "tone": "타악과 관악이 펼치는 밝은 사운드",
+    "reason": "추운 날에도 활력을 조금 보태 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Japanese%20Breakfast%20Paprika"
+  },
+  {
+    "title": "Simulation Swarm",
+    "artist": "Big Thief",
+    "year": 2022,
+    "genre": "Indie Rock",
+    "moods": [
+      "focused",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "기억과 현실의 경계",
+    "tone": "세밀한 기타와 일정한 흐름",
+    "reason": "집중이 필요한 오후에 자연스럽게 이어져요.",
+    "lyricsUrl": "https://genius.com/search?q=Big%20Thief%20Simulation%20Swarm"
+  },
+  {
+    "title": "Belinda Says",
+    "artist": "Alvvays",
+    "year": 2022,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "떠남과 새로운 삶",
+    "tone": "선명한 기타와 아련한 멜로디",
+    "reason": "겨울의 이동과 변화에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=Alvvays%20Belinda%20Says"
+  },
+  {
+    "title": "It's Not Just Me, It's Everybody",
+    "artist": "Weyes Blood",
+    "year": 2022,
+    "genre": "Art Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "외로움의 보편성",
+    "tone": "풍성한 현악과 부드러운 보컬",
+    "reason": "혼자라는 감각을 조금 덜어 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Weyes%20Blood%20It%27s%20Not%20Just%20Me%2C%20It%27s%20Everybody"
+  },
+  {
+    "title": "Free in the Knowledge",
+    "artist": "The Smile",
+    "year": 2022,
+    "genre": "Art Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "불확실성 속의 희망",
+    "tone": "잔잔한 어쿠스틱과 서서히 쌓이는 화음",
+    "reason": "지친 마음에 서두르지 않는 위로를 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Smile%20Free%20in%20the%20Knowledge"
+  },
+  {
+    "title": "kisses",
+    "artist": "Slowdive",
+    "year": 2023,
+    "genre": "Dream Pop",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "그리움과 재회",
+    "tone": "부드럽게 겹치는 기타와 보컬",
+    "reason": "눈 오는 날의 아련함을 살려 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=Slowdive%20kisses"
+  },
+  {
+    "title": "Will Anybody Ever Love Me?",
+    "artist": "Sufjan Stevens",
+    "year": 2023,
+    "genre": "Folk Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 1,
+    "theme": "사랑받고 싶은 마음",
+    "tone": "섬세한 현악과 다정한 화음",
+    "reason": "마음이 약해지는 날 조용히 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=Sufjan%20Stevens%20Will%20Anybody%20Ever%20Love%20Me%3F"
+  },
+  {
+    "title": "Tropic Morning News",
+    "artist": "The National",
+    "year": 2023,
+    "genre": "Indie Rock",
+    "moods": [
+      "focused",
+      "blue"
+    ],
+    "weathers": [
+      "cloudy",
+      "rain"
+    ],
+    "energy": 3,
+    "theme": "정보 과잉과 피로",
+    "tone": "반복적인 리듬과 낮은 보컬",
+    "reason": "머릿속이 복잡한 날 생각을 정리하게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20National%20Tropic%20Morning%20News"
+  },
+  {
+    "title": "Chosen to Deserve",
+    "artist": "Wednesday",
+    "year": 2023,
+    "genre": "Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "cloudy",
+      "clear"
+    ],
+    "energy": 2,
+    "theme": "과거의 상처와 솔직함",
+    "tone": "컨트리 감각의 기타와 거친 보컬",
+    "reason": "담담하게 자신의 이야기를 마주하게 해요.",
+    "lyricsUrl": "https://genius.com/search?q=Wednesday%20Chosen%20to%20Deserve"
+  },
+  {
+    "title": "On Your Side",
+    "artist": "The Last Dinner Party",
+    "year": 2024,
+    "genre": "Art Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "곁에 남겠다는 약속",
+    "tone": "서정적인 피아노와 고조되는 보컬",
+    "reason": "위로가 필요한 밤에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=The%20Last%20Dinner%20Party%20On%20Your%20Side"
+  },
+  {
+    "title": "Favourite",
+    "artist": "Fontaines D.C.",
+    "year": 2024,
+    "genre": "Post-Punk",
+    "moods": [
+      "calm",
+      "blue"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "변화 속의 우정과 기억",
+    "tone": "맑은 기타와 아련한 리듬",
+    "reason": "차가운 날에도 따뜻한 여운을 남겨요.",
+    "lyricsUrl": "https://genius.com/search?q=Fontaines%20D.C.%20Favourite"
+  },
+  {
+    "title": "재즈 카페",
+    "artist": "신해철",
+    "year": 1991,
+    "genre": "Korean Rock",
+    "moods": [
+      "calm",
+      "focused"
+    ],
+    "weathers": [
+      "rain",
+      "cloudy"
+    ],
+    "energy": 2,
+    "theme": "도시의 고독과 관찰",
+    "tone": "유려한 리듬과 건조한 보컬",
+    "reason": "비 오는 도시의 밤에 잘 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%8B%A0%ED%95%B4%EC%B2%A0%20%EC%9E%AC%EC%A6%88%20%EC%B9%B4%ED%8E%98"
+  },
+  {
+    "title": "출발",
+    "artist": "어떤날",
+    "year": 1989,
+    "genre": "Korean Folk Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "clear",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "새로운 길의 시작",
+    "tone": "따뜻한 기타와 소박한 화음",
+    "reason": "지친 마음으로 다시 출발할 때 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%96%B4%EB%96%A4%EB%82%A0%20%EC%B6%9C%EB%B0%9C"
+  },
+  {
+    "title": "샴푸의 요정",
+    "artist": "빛과 소금",
+    "year": 1990,
+    "genre": "Korean Soft Rock",
+    "moods": [
+      "calm",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "일상의 환상과 설렘",
+    "tone": "부드러운 건반과 매끈한 리듬",
+    "reason": "겨울 오후의 느긋한 분위기에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=%EB%B9%9B%EA%B3%BC%20%EC%86%8C%EA%B8%88%20%EC%83%B4%ED%91%B8%EC%9D%98%20%EC%9A%94%EC%A0%95"
+  },
+  {
+    "title": "순간을 믿어요",
+    "artist": "언니네 이발관",
+    "year": 2004,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "rain",
+      "snow"
+    ],
+    "energy": 2,
+    "theme": "찰나와 믿음",
+    "tone": "절제된 기타와 담담한 보컬",
+    "reason": "흐린 날 마음을 천천히 정리하기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%96%B8%EB%8B%88%EB%84%A4%20%EC%9D%B4%EB%B0%9C%EA%B4%80%20%EC%88%9C%EA%B0%84%EC%9D%84%20%EB%AF%BF%EC%96%B4%EC%9A%94"
+  },
+  {
+    "title": "유자차",
+    "artist": "브로콜리너마저",
+    "year": 2008,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "추운 계절의 작은 위로",
+    "tone": "소박한 기타와 따뜻한 합창",
+    "reason": "기운 없는 겨울날 온기를 더해 줘요.",
+    "lyricsUrl": "https://genius.com/search?q=%EB%B8%8C%EB%A1%9C%EC%BD%9C%EB%A6%AC%EB%84%88%EB%A7%88%EC%A0%80%20%EC%9C%A0%EC%9E%90%EC%B0%A8"
+  },
+  {
+    "title": "백야",
+    "artist": "짙은",
+    "year": 2008,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "blue",
+      "tired"
+    ],
+    "weathers": [
+      "snow",
+      "cloudy"
+    ],
+    "energy": 1,
+    "theme": "잠들지 못하는 밤",
+    "tone": "낮은 목소리와 잔잔한 기타",
+    "reason": "늦은 밤 혼자 듣기 좋은 곡이에요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%A7%99%EC%9D%80%20%EB%B0%B1%EC%95%BC"
+  },
+  {
+    "title": "Ready, Get Set, Go!",
+    "artist": "페퍼톤스",
+    "year": 2005,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "excited",
+      "focused"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy"
+    ],
+    "energy": 4,
+    "theme": "출발의 설렘",
+    "tone": "경쾌한 기타와 빠른 드럼",
+    "reason": "기분을 전환하고 다시 움직이기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=%ED%8E%98%ED%8D%BC%ED%86%A4%EC%8A%A4%20Ready%2C%20Get%20Set%2C%20Go%21"
+  },
+  {
+    "title": "수고했어, 오늘도",
+    "artist": "옥상달빛",
+    "year": 2011,
+    "genre": "Korean Indie Pop",
+    "moods": [
+      "tired",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "하루를 버틴 사람에게",
+    "tone": "담백한 화음과 다정한 멜로디",
+    "reason": "힘든 하루 끝에 부담 없이 듣기 좋아요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%98%A5%EC%83%81%EB%8B%AC%EB%B9%9B%20%EC%88%98%EA%B3%A0%ED%96%88%EC%96%B4%2C%20%EC%98%A4%EB%8A%98%EB%8F%84"
+  },
+  {
+    "title": "Antifreeze",
+    "artist": "검정치마",
+    "year": 2010,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "tired",
+      "blue"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 1,
+    "theme": "차가운 계절의 사랑",
+    "tone": "나른한 보컬과 서정적인 기타",
+    "reason": "겨울밤에 조용한 온기를 남겨요.",
+    "lyricsUrl": "https://genius.com/search?q=%EA%B2%80%EC%A0%95%EC%B9%98%EB%A7%88%20Antifreeze"
+  },
+  {
+    "title": "난춘",
+    "artist": "새소년",
+    "year": 2020,
+    "genre": "Korean Indie Rock",
+    "moods": [
+      "blue",
+      "calm"
+    ],
+    "weathers": [
+      "snow",
+      "rain"
+    ],
+    "energy": 2,
+    "theme": "상처 이후의 계절",
+    "tone": "애틋한 기타와 힘 있는 보컬",
+    "reason": "차가운 날의 복잡한 감정에 어울려요.",
+    "lyricsUrl": "https://genius.com/search?q=%EC%83%88%EC%86%8C%EB%85%84%20%EB%82%9C%EC%B6%98"
   }
 ]
