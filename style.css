@@ -987,6 +987,11 @@ main > .artist-feature > h2 {
   margin: 6px 0 22px;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
+
+.news-panel h2 {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
 .artist-editorial-grid {
   display: grid;
   grid-template-columns: minmax(0, 42%) minmax(0, 1fr);
@@ -1050,7 +1055,7 @@ main > .artist-feature > h2 {
   line-height: 1.65;
 }
 .artist-editorial-right .artist-feature-subtitle {
-  margin: 20px 0 20px;
+  margin: 4px 0 7px;
   font-size: 1rem;
 }
 .artist-editorial-right .artist-feature-editor {
