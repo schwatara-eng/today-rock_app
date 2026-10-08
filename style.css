@@ -553,3 +553,8 @@ footer {
   color: var(--gray);
   line-height: 1.7;
 }
+
+/* 오늘의 뮤지션 제목 줄바꿈 방지 */
+.artist-panel h2 {
+  white-space: nowrap;
+}
